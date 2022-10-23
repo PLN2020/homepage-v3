@@ -1,15 +1,19 @@
-import { Box, Text } from "@chakra-ui/react"
+import { Box, Flex, Text } from "@chakra-ui/react"
 import { FaFlickr, FaGithub, FaLaptopCode, FaLinkedin } from 'react-icons/fa'
 import NextLink from 'next/link'
 import ThemeToggleButton from "./_theme-toggle-button"
 
 function Navbar() {
     return (
-        <Box
+        <Flex
             as="nav"
+            w="100%"
+            borderBottom="1px solid rgb(255, 255, 255, 0.1)"
         >
             {/* Logo Section */}
-            <Box>
+            <Box 
+                padding="3rem 2rem"
+            >
                 <NextLink href="#" passHref>
                     <Box
                         display='inline-flex'
@@ -24,12 +28,13 @@ function Navbar() {
             </Box>
 
             {/* Link Section */}
-            <Box>
+            <Flex 
+                padding="3rem 2rem" 
+                gap="1rem"
+                borderLeft="1px solid rgb(255, 255, 255, 0.1)"
+            >
                 <NextLink href="#" passHref>
                     About
-                </NextLink>
-                <NextLink href="#" passHref>
-                    Toolkit
                 </NextLink>
                 <NextLink href="#" passHref>
                     Projects
@@ -40,10 +45,14 @@ function Navbar() {
                 <NextLink href="#" passHref>
                     Contact
                 </NextLink>
-            </Box>
+            </Flex>
 
             {/* Social Section */}
-            <Box>
+            <Flex 
+                padding="3rem 2rem" 
+                gap="1rem"
+                borderLeft="1px solid rgb(255, 255, 255, 0.1)"    
+            >
                 <NextLink href="#" passHref>
                     <FaGithub />
                 </NextLink>
@@ -53,13 +62,17 @@ function Navbar() {
                 <NextLink href="#" passHref>
                     <FaFlickr />
                 </NextLink>
-            </Box>
+            </Flex>
 
             {/* Buttons Sections */}
-            <Box>
+            <Flex 
+                padding="3rem 2rem"
+                gap="1rem"
+                borderLeft="1px solid rgb(255, 255, 255, 0.1)"
+            >
                 <ThemeToggleButton />
-            </Box>
-        </Box>
+            </Flex>
+        </Flex>
     )
     }
 
