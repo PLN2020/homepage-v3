@@ -1,18 +1,38 @@
-import { Box, Flex, Text } from "@chakra-ui/react"
+import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react"
 import { FaFlickr, FaGithub, FaLaptopCode, FaLinkedin } from 'react-icons/fa'
 import NextLink from 'next/link'
 import ThemeToggleButton from "./_theme-toggle-button"
 
 function Navbar() {
+
+    const NavSection = ({ children }) => {
+        return (
+            <Flex
+                p="3rem 2rem"
+                gap="1rem"
+                borderLeft="1px solid"
+                borderLeftColor={useColorModeValue('fujimurasaki', 'shikon')}
+                align="center"
+                boxSizing="border-box"
+            >
+                {children}
+            </Flex>
+        )
+    }
+
     return (
         <Flex
             as="nav"
             w="100%"
-            borderBottom="1px solid rgb(255, 255, 255, 0.1)"
+            borderBottom="1px solid"
+            borderBottomColor={useColorModeValue('fujimurasaki', 'shikon')}
         >
             {/* Logo Section */}
-            <Box 
+            <Flex 
                 padding="3rem 2rem"
+                align="center"
+                w="calc(100% / 3)"
+                boxSizing="border-box"
             >
                 <NextLink href="#" passHref>
                     <Box
@@ -21,17 +41,22 @@ function Navbar() {
                     >
                         <FaLaptopCode />
                         <Text>
-                            plnguyen
+                            &nbsp;plnguyen
                         </Text>
                     </Box>
                 </NextLink>
-            </Box>
+            </Flex>
 
             {/* Link Section */}
-            <Flex 
-                padding="3rem 2rem" 
-                gap="1rem"
-                borderLeft="1px solid rgb(255, 255, 255, 0.1)"
+            <Flex
+                p="3rem 2rem"
+                gap="2rem"
+                borderLeft="1px solid"
+                borderLeftColor={useColorModeValue('fujimurasaki', 'shikon')}
+                align="center"
+                justify="center"
+                boxSizing="border-box"
+                w="calc(100% / 3)"
             >
                 <NextLink href="#" passHref>
                     About
@@ -48,10 +73,15 @@ function Navbar() {
             </Flex>
 
             {/* Social Section */}
-            <Flex 
-                padding="3rem 2rem" 
-                gap="1rem"
-                borderLeft="1px solid rgb(255, 255, 255, 0.1)"    
+            <Flex
+                p="3rem 2rem"
+                gap="1.5rem"
+                borderLeft="1px solid"
+                borderLeftColor={useColorModeValue('fujimurasaki', 'shikon')}
+                align="center"
+                justify="center"
+                boxSizing="border-box"
+                w="calc(100% / 6)"
             >
                 <NextLink href="#" passHref>
                     <FaGithub />
@@ -65,10 +95,15 @@ function Navbar() {
             </Flex>
 
             {/* Buttons Sections */}
-            <Flex 
-                padding="3rem 2rem"
+            <Flex
+                p="3rem 2rem"
                 gap="1rem"
-                borderLeft="1px solid rgb(255, 255, 255, 0.1)"
+                borderLeft="1px solid"
+                borderLeftColor={useColorModeValue('fujimurasaki', 'shikon')}
+                align="center"
+                justify="center"
+                boxSizing="border-box"
+                w="calc(100% / 6)"
             >
                 <ThemeToggleButton />
             </Flex>

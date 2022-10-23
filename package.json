@@ -13,6 +13,8 @@
     "@chakra-ui/react": "^2.3.6",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@fontsource/noto-sans": "^4.5.11",
+    "@fontsource/shippori-mincho": "^4.5.11",
     "framer-motion": "^7.6.1",
     "next": "12.3.1",
     "next-translate": "^1.6.0",
