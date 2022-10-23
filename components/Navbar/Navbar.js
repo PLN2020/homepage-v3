@@ -1,24 +1,28 @@
-import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex, Text, useColorModeValue, Link } from "@chakra-ui/react"
 import { FaFlickr, FaGithub, FaLaptopCode, FaLinkedin } from 'react-icons/fa'
 import NextLink from 'next/link'
 import ThemeToggleButton from "./_theme-toggle-button"
 
-function Navbar() {
-
-    const NavSection = ({ children }) => {
-        return (
-            <Flex
-                p="3rem 2rem"
-                gap="1rem"
-                borderLeft="1px solid"
-                borderLeftColor={useColorModeValue('fujimurasaki', 'shikon')}
-                align="center"
-                boxSizing="border-box"
+const LinkItem = ({ href, path, target, children, ...props }) => {
+    const active = path === href
+    const inactiveColor = useColorModeValue('fujimurasaki', 'shikon')
+    return (
+        <NextLink href={href} passHref>
+            <Link
+                bg={active ? 'white' : undefined}
+                color={active ? '#202023' : inactiveColor}
+                target={target}
+                {...props}
             >
                 {children}
-            </Flex>
-        )
-    }
+            </Link>
+        </NextLink>
+    )
+}
+
+const Navbar = props => {
+
+    const { path } = props
 
     return (
         <Flex
@@ -34,7 +38,7 @@ function Navbar() {
                 w="calc(100% / 3)"
                 boxSizing="border-box"
             >
-                <NextLink href="#" passHref>
+                <NextLink href="/" passHref>
                     <Box
                         display='inline-flex'
                         alignItems='center'
@@ -50,7 +54,7 @@ function Navbar() {
             {/* Link Section */}
             <Flex
                 p="3rem 2rem"
-                gap="2rem"
+                gap="1.5rem"
                 borderLeft="1px solid"
                 borderLeftColor={useColorModeValue('fujimurasaki', 'shikon')}
                 align="center"
@@ -58,18 +62,18 @@ function Navbar() {
                 boxSizing="border-box"
                 w="calc(100% / 3)"
             >
-                <NextLink href="#" passHref>
-                    About
-                </NextLink>
-                <NextLink href="#" passHref>
-                    Projects
-                </NextLink>
-                <NextLink href="#" passHref>
-                    Photography
-                </NextLink>
-                <NextLink href="#" passHref>
-                    Contact
-                </NextLink>
+                <LinkItem href="/about" path={path}>
+                    ABOUT
+                </LinkItem>
+                <LinkItem href="/projects" path={path}>
+                    PROJECTS
+                </LinkItem>
+                <LinkItem href="/photography" path={path}>
+                    PHOTOGRAPHY
+                </LinkItem>
+                <LinkItem href="/contact" path={path}>
+                    CONTACT
+                </LinkItem>
             </Flex>
 
             {/* Social Section */}
