@@ -1,6 +1,6 @@
 import { withRouter } from "next/router"
 import NextLink from 'next/link'
-import { Link } from "@chakra-ui/react"
+import { Link, useColorModeValue } from "@chakra-ui/react"
 
 const LinkItem = ({ router, href, children }) => {
     (function prefetchPages() {
@@ -15,6 +15,8 @@ const LinkItem = ({ router, href, children }) => {
     }
 
     const isCurrentPath = router.pathname === href || router.asPath === href;
+    const inactiveColor = useColorModeValue('gray.300', 'whiteAlpha.300')
+    const activeColor = useColorModeValue('fujimurasaki', 'shion')
 
     return (
         <NextLink href={href} passHref onClick={handleClick}>
@@ -23,7 +25,12 @@ const LinkItem = ({ router, href, children }) => {
                 m='0'
                 p='0'
                 fontWeight={isCurrentPath ? 'bold' : 'normal'}
-                color={isCurrentPath ? 'white' : 'black'}
+                color={isCurrentPath ? activeColor : inactiveColor}
+                fontFamily="Poppins"
+                transition="all 0.2s ease-out"
+                _hover={{
+                    color: "shion"
+                }}
             >
                 {children}
             </Link>

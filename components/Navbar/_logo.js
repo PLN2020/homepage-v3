@@ -6,7 +6,6 @@ const Logo = () => {
     return (
         <Link href="/" scroll={true}>
             <Box
-                fontWeight="bold"
                 fontSize= {{ base: '0.8em', md: '40px' }}
                 display="inline-flex"
                 alignItems="center"

@@ -68,18 +68,15 @@ const Navbar = props => {
                 <LinkItem href="/about">
                     ABOUT
                 </LinkItem>
-                {/* <LinkItem href="/about" path={path}>
-                    ABOUT
-                </LinkItem>
-                <LinkItem href="/projects" path={path}>
+                <LinkItem href="/projects">
                     PROJECTS
                 </LinkItem>
-                <LinkItem href="/photography" path={path}>
+                <LinkItem href="/photography">
                     PHOTOGRAPHY
                 </LinkItem>
-                <LinkItem href="/contact" path={path}>
+                <LinkItem href="/contact">
                     CONTACT
-                </LinkItem> */}
+                </LinkItem>
             </Flex>
 
             {/* Social Section */}
