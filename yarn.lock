@@ -1107,6 +1107,11 @@
   "resolved" "https://registry.npmjs.org/@fontsource/noto-sans/-/noto-sans-4.5.11.tgz"
   "version" "4.5.11"
 
+"@fontsource/poppins@^4.5.10":
+  "integrity" "sha512-oYZVHsnlwV3VWM1SE/m6SUxVh0QLk5+2wB+lBiXcI7N/0KVQWmV9YykaPqfJHBLvmdya+MAOnv+BQHeLU1vOOw=="
+  "resolved" "https://registry.npmjs.org/@fontsource/poppins/-/poppins-4.5.10.tgz"
+  "version" "4.5.10"
+
 "@fontsource/shippori-mincho@^4.5.11":
   "integrity" "sha512-TKhMj3EenyLwthlEiNUOUVceRVg49XmzNXElGJ/aVjaEu8eQLMfoZ0ePSf1JRSQRDaGzYGGt7hcEIcayeZpIvA=="
   "resolved" "https://registry.npmjs.org/@fontsource/shippori-mincho/-/shippori-mincho-4.5.11.tgz"

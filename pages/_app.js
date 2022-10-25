@@ -4,6 +4,7 @@ import theme from "../lib/theme"
 
 import '@fontsource/noto-sans/400.css'
 import '@fontsource/shippori-mincho/800.css'
+import '@fontsource/poppins/700.css'
 
 function MyApp({ Component, pageProps }) {
     return (

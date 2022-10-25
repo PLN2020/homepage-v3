@@ -3,6 +3,7 @@ import { FaFlickr, FaGithub, FaLaptopCode, FaLinkedin } from 'react-icons/fa'
 import NextLink from 'next/link'
 import ThemeToggleButton from "./_theme-toggle-button"
 import LinkItem from "./_link-item"
+import Logo from "./_logo"
 
 // const LinkItem = ({ href, path, target, children, ...props }) => {
 //     const active = path === href
@@ -39,7 +40,8 @@ const Navbar = props => {
                 w="calc(100% / 3)"
                 boxSizing="border-box"
             >
-                <NextLink href="/" passHref>
+                <Logo />
+                {/* <NextLink href="/" passHref>
                     <Box
                         display='inline-flex'
                         alignItems='center'
@@ -49,7 +51,7 @@ const Navbar = props => {
                             &nbsp;plnguyen
                         </Text>
                     </Box>
-                </NextLink>
+                </NextLink> */}
             </Flex>
 
             {/* Link Section */}
