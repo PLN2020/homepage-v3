@@ -1,14 +1,14 @@
-import { Box, Flex, Text, useColorModeValue, Link } from "@chakra-ui/react"
+import { Flex, useColorModeValue, Link } from "@chakra-ui/react"
 import { FaFlickr, FaGithub, FaLinkedin } from 'react-icons/fa'
 import NextLink from 'next/link'
 import ThemeToggleButton from "./_theme-toggle-button"
 import LinkItem from "./_link-item"
 import Logo from "./_logo"
 import ToggleLocaleButton from "./_toggle-locale-button"
+import useTranslation from 'next-translate/useTranslation'
 
-const Navbar = props => {
-
-    const { path } = props
+const Navbar = () => {
+    let { t } = useTranslation()
 
     return (
         <Flex
@@ -39,16 +39,16 @@ const Navbar = props => {
                 w="calc(100% / 3)"
             >
                 <LinkItem href="/about">
-                    ABOUT
+                    {t('common:section-one')}
                 </LinkItem>
                 <LinkItem href="/projects">
-                    PROJECTS
+                    {t('common:section-two')}
                 </LinkItem>
                 <LinkItem href="/photography">
-                    PHOTOGRAPHY
+                    {t('common:section-three')}
                 </LinkItem>
                 <LinkItem href="/contact">
-                    CONTACT
+                    {t('common:section-four')}
                 </LinkItem>
             </Flex>
 
@@ -62,16 +62,38 @@ const Navbar = props => {
                 justify="center"
                 boxSizing="border-box"
                 w="calc(100% / 6)"
+                fontSize="2.5rem"
             >
-                <NextLink href="#" passHref>
+                <Link
+                    href="https://github.com/PLN2020"
+                    target="_blank"
+                    transition="all ease-in 200ms"
+                    _hover={{
+                        color: "fujimurasaki"
+                    }}
+                >
                     <FaGithub />
-                </NextLink>
-                <NextLink href="#" passHref>
+                </Link>
+                <Link
+                    href="https://www.linkedin.com/in/plnguyen2021"
+                    target="_blank"
+                    transition="all ease-in 200ms"
+                    _hover={{
+                        color: "fujimurasaki"
+                    }}
+                >
                     <FaLinkedin />
-                </NextLink>
-                <NextLink href="#" passHref>
+                </Link>
+                <Link
+                    href="https://flic.kr/ps/Xn7sG"
+                    target="_blank"
+                    transition="all ease-in 200ms"
+                    _hover={{
+                        color: "fujimurasaki"
+                    }}
+                >
                     <FaFlickr />
-                </NextLink>
+                </Link>
             </Flex>
 
             {/* Buttons Sections */}

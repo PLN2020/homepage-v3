@@ -2,6 +2,11 @@
     "locales": ["en", "fr", "ja"],
     "defaultLocale": "en",
     "pages": {
-        "*": ["common"]
+        "*": ["common"],
+        "/": ["index"],
+        "/about": ["about"],
+        "/projects": ["projects"],
+        "/photography": ["photography"],
+        "/contact": ["contact"]
     }
 }
