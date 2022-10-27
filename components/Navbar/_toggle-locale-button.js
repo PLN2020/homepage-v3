@@ -1,5 +1,4 @@
-import { ChevronDownIcon } from "@chakra-ui/icons"
-import { Menu, MenuButton, MenuItem, MenuList, Button, Link, Image } from "@chakra-ui/react"
+import { Menu, MenuButton, MenuItem, MenuList, Button, Link, Center } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import NextLink from "next/link"
 
@@ -16,8 +15,8 @@ const ToggleLocaleButton = () => {
 
     return (
         <Menu>
-            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                {language}
+            <MenuButton as={Button}>
+                <Center>{language}</Center>
             </MenuButton>
             
             <MenuList>
