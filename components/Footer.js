@@ -1,4 +1,4 @@
-import { Box, Center, Text } from '@chakra-ui/react'
+import { Center, Text } from '@chakra-ui/react'
 
 function Footer() {
     return (
@@ -9,7 +9,7 @@ function Footer() {
         >
             {/* {new Date().getFullYear()}  */}
             <Text opacity={0.4} fontSize="sm">
-                2022 &copy; Patrick-Lam Nguyen
+                &copy; 2022 Patrick-Lam Nguyen
             </Text>
         </Center>
     )

@@ -3,7 +3,7 @@ import Head from "next/head"
 import Navbar from "./Navbar/Navbar"
 import Footer from "./Footer"
 
-const Layout = ({ children, router }) => {
+const Layout = ({ children }) => {
     return (
         <Box as="main">
             <Head>
