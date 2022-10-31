@@ -11,7 +11,6 @@ const Main = ({ children }) => {
                 <meta name="viewport" content="width-device-width, initial-scale=1" />
                 <meta name="description" content="Patrick-Lam Nguyen's homepage" />
                 <meta name="author" content="Patrick-Lam Nguyen" />
-                {/* Icon */}
                 <link rel="icon" href="/coding.ico" />
             </Head>
 
