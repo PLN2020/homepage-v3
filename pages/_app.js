@@ -25,9 +25,7 @@ function MyApp({ Component, pageProps }) {
     return (
         <ChakraProvider theme={theme}>
             <Layout>
-                {/* {loading && <Loader />} */}
                 { loading ? <Loader /> : <Component {...pageProps} /> }
-                {/* <Component {...pageProps} /> */}
             </Layout>
         </ChakraProvider>
     )

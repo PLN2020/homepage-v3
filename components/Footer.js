@@ -4,7 +4,7 @@ function Footer() {
     return (
         <Center
             as="footer"
-            h="60px"
+            h="40px"
             borderTop="1px solid #8F77B5"
         >
             {/* {new Date().getFullYear()}  */}
