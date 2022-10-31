@@ -15,7 +15,7 @@ const LinkItem = ({ router, href, children, ...props }) => {
     }
 
     const isCurrentPath = router.pathname === href || router.asPath === href;
-    const inactiveColor = useColorModeValue('gray.300', 'whiteAlpha.300')
+    const inactiveColor = useColorModeValue('gray.400', 'whiteAlpha.400')
     const activeColor = useColorModeValue('fujimurasaki', 'shion')
 
     return (

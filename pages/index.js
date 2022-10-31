@@ -2,7 +2,8 @@ import { Box, Center, Heading, Text, Highlight, Flex, Button } from '@chakra-ui/
 import Section from '../components/Section';
 import useTranslation from 'next-translate/useTranslation';
 import NextLink from "next/link"
-import { EmailIcon, InfoIcon, InfoOutlineIcon } from '@chakra-ui/icons';
+import { EmailIcon, InfoOutlineIcon } from '@chakra-ui/icons';
+import { useColorModeValue } from '@chakra-ui/react';
 
 export default function Home() {
     let { t } = useTranslation()
@@ -40,7 +41,7 @@ export default function Home() {
                         <Text color="shironeri" fontSize="lg">
                             <Highlight 
                                 query={['Web Developer', 'Développeur Web', 'Web開発者']}
-                                styles={{ px: "0.5", py: "0.5", fontWeight: "bold", bg: "#FCFAF2"}}
+                                styles={{ px: "0.5", py: "0.5", fontWeight: "bold", bg: "purple.200"}}
                             >
                                 {t('index:title')}
                             </Highlight>
@@ -52,7 +53,12 @@ export default function Home() {
                         <Flex mt="1rem">
                             <Box mr="1rem">
                                 <NextLink href="/about" passHref scroll={false}>
-                                    <Button borderRadius={0} rightIcon={<InfoOutlineIcon />} border="1px solid #FCFAF2">
+                                    <Button 
+                                        borderRadius={0} 
+                                        rightIcon={<InfoOutlineIcon />} 
+                                        border="1px solid"
+                                        borderColor={useColorModeValue('sumi', 'shironeri')}
+                                    >
                                         {t('index:about')}
                                     </Button>
                                 </NextLink>
@@ -60,7 +66,12 @@ export default function Home() {
 
                             <Box>
                                 <NextLink href="/contact" passHref scroll={false}>
-                                    <Button borderRadius={0} rightIcon={<EmailIcon />} border="1px solid #FCFAF2">
+                                    <Button 
+                                        borderRadius={0} 
+                                        rightIcon={<EmailIcon />} 
+                                        border="1px solid"
+                                        borderColor={useColorModeValue('sumi', 'shironeri')}
+                                    >
                                         {t('index:contact')}
                                     </Button>
                                 </NextLink>
