@@ -7,3 +7,13 @@ const About = () => {
 }
 
 export default About
+
+export async function getServerSideProps() {
+    await new Promise((resolve) => {
+        setTimeout(resolve, 1000);
+    });
+
+    return {
+        props: {},
+    };
+}
