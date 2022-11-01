@@ -1,4 +1,4 @@
-import { Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, useColorModeValue } from "@chakra-ui/react";
 import useTranslation from "next-translate/useTranslation";
 import Section from "../components/Section";
 import { ImProfile } from 'react-icons/im'
@@ -18,11 +18,72 @@ const About = () => {
             templateColumns='repeat(3, 1fr)'
             gap={0}
         >
+            {/* Page Heading Section */}
+            <GridItem 
+                rowSpan={1} 
+                colSpan={2} 
+                display="flex" 
+                alignItems="center"
+                borderBottom="1px solid"
+                borderColor={useColorModeValue('fujimurasaki', 'shion')}
+            >
+                <Section>
+                    <PageHeading title={t('about:heading')} icon={ImProfile} />
+                </Section>
+            </GridItem>
+
+            {/* Toolkit Section */}
+            <GridItem 
+                rowSpan={3} 
+                colSpan={1} 
+                borderLeft="1px solid"
+                borderColor={useColorModeValue('fujimurasaki', 'shion')}
+            >
+                <Box p="2rem">
+                    <Section>
+                        <Heading as="h2">
+                            Toolkit
+                        </Heading>
+
+                        <Tabs>
+                            <TabList>
+                                <Tab>Front-end</Tab>
+                                <Tab>Back-end</Tab>
+                                <Tab>Workflow</Tab>
+                            </TabList>
+
+                            <TabPanels>
+                                <TabPanel>
+                                    HTML
+                                </TabPanel>
+                                <TabPanel>
+                                    Ruby
+                                </TabPanel>
+                                <TabPanel>
+                                    JIRA
+                                </TabPanel>
+                            </TabPanels>
+                        </Tabs>
+                    </Section>
+                </Box>
+            </GridItem>
+
+            {/* Profile Section */}
+            <GridItem 
+                rowSpan={1} 
+                colSpan={1} 
+                flexDirection="column"
+            >
+                <Section>
+                    <Profile padding="2rem" heading={t('about:profileHead')} text={t('about:profile')} />
+                </Section>
+            </GridItem>
+
             {/* Education Section */}
             <GridItem 
                 rowSpan={2}
                 colSpan={1}
-                borderBottom="1px solid"
+                borderLeft="1px solid"
                 borderColor={useColorModeValue('fujimurasaki', 'shion')}
             >
                 <Section>
@@ -38,35 +99,6 @@ const About = () => {
                         jlpt={t('about:jlpt')}
                         jlptButton={t('about:jlpt-button')}
                     />
-                </Section>
-            </GridItem>
-
-            {/* Toolkit Section */}
-            <GridItem rowSpan={2} colSpan={2} bg='shikon'/>
-
-            {/* Page Heading Section */}
-            <GridItem 
-                rowSpan={1} 
-                colSpan={2} 
-                display="flex" 
-                alignItems="center"
-                borderColor={useColorModeValue('fujimurasaki', 'shion')}
-            >
-                <Section>
-                    <PageHeading title={t('about:heading')} icon={ImProfile} />
-                </Section>
-            </GridItem>
-
-            {/* Profile Section */}
-            <GridItem 
-                rowSpan={1} 
-                colSpan={1} 
-                flexDirection="column"
-                borderLeft="1px solid"
-                borderColor={useColorModeValue('fujimurasaki', 'shion')}
-            >
-                <Section>
-                    <Profile padding="2rem" heading={t('about:profileHead')} text={t('about:profile')} />
                 </Section>
             </GridItem>
         </Grid>
