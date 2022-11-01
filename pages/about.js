@@ -1,9 +1,10 @@
-import { Box, Button, Grid, GridItem, Heading, Icon, Link, StackDivider, Text, useColorModeValue, VStack } from "@chakra-ui/react";
+import { Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
 import useTranslation from "next-translate/useTranslation";
 import Section from "../components/Section";
 import { ImProfile } from 'react-icons/im'
 import PageHeading from "../components/PageHeading";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import Profile from "../components/About/_profile";
+import Education from "../components/About/_education";
 
 const About = () => {
     let { t } = useTranslation()
@@ -17,6 +18,7 @@ const About = () => {
             templateColumns='repeat(3, 1fr)'
             gap={0}
         >
+            {/* Education Section */}
             <GridItem 
                 rowSpan={2}
                 colSpan={1}
@@ -24,58 +26,25 @@ const About = () => {
                 borderColor={useColorModeValue('fujimurasaki', 'shion')}
             >
                 <Section>
-                    <Box p="2rem">
-                        <Heading as="h2" pb="1rem">
-                            {t('about:educationHead')}
-                        </Heading>
-                        <VStack
-                            divider={<StackDivider borderColor='shion' />}
-                            spacing={3}
-                            align='stretch'
-                        >
-                            <Box>
-                                <Heading as="h3" fontSize="md" pb="4px">
-                                    {t('about:ed-one-title')}
-                                </Heading>
-                                <Text fontSize="sm">
-                                    {t('about:ed-one-desc')}
-                                </Text>
-                            </Box>
-                            <Box>
-                                <Heading as="h3" fontSize="md" pb="4px">
-                                    {t('about:ed-two-title')}
-                                </Heading>
-                                <Text fontSize="sm">
-                                    {t('about:ed-two-desc')}
-                                </Text>
-                            </Box>
-                            <Box>
-                                <Heading as="h3" fontSize="md" pb="4px">
-                                    {t('about:ed-three-title')}
-                                </Heading>
-                                <Text fontSize="sm">
-                                    {t('about:ed-three-desc')}
-                                </Text>
-                            </Box>
-                        </VStack>
-
-                        <Text pt="1rem" pb="6px" fontSize="sm">
-                            {t('about:jlpt')}
-                        </Text>
-                        <Button variant="outline" borderRadius={0} fontSize="sm" rightIcon={<ExternalLinkIcon />}>
-                            <Link
-                                href="https://www.jlpt.jp/e/about/levelsummary.html" 
-                                target="_blank"
-                            >
-                                {t('about:jlpt-button')}
-                            </Link>
-                        </Button>
-                    </Box>
+                    <Education 
+                        padding="2rem"
+                        heading={t('about:educationHead')}
+                        edOneHead={t('about:ed-one-title')}
+                        edOneDesc={t('about:ed-one-desc')}
+                        edTwoHead={t('about:ed-two-title')}
+                        edTwoDesc={t('about:ed-two-desc')}
+                        edThreeHead={t('about:ed-three-title')}
+                        edThreeDesc={t('about:ed-three-desc')}
+                        jlpt={t('about:jlpt')}
+                        jlptButton={t('about:jlpt-button')}
+                    />
                 </Section>
             </GridItem>
 
+            {/* Toolkit Section */}
             <GridItem rowSpan={2} colSpan={2} bg='shikon'/>
 
+            {/* Page Heading Section */}
             <GridItem 
                 rowSpan={1} 
                 colSpan={2} 
@@ -88,6 +57,7 @@ const About = () => {
                 </Section>
             </GridItem>
 
+            {/* Profile Section */}
             <GridItem 
                 rowSpan={1} 
                 colSpan={1} 
@@ -96,14 +66,7 @@ const About = () => {
                 borderColor={useColorModeValue('fujimurasaki', 'shion')}
             >
                 <Section>
-                    <Box p="2rem">
-                        <Heading as="h2" pb="1rem">
-                            {t('about:profileHead')}
-                        </Heading>
-                        <Text textAlign="left" fontSize="sm">
-                            {t('about:profile')}
-                        </Text>
-                    </Box>
+                    <Profile padding="2rem" heading={t('about:profileHead')} text={t('about:profile')} />
                 </Section>
             </GridItem>
         </Grid>
