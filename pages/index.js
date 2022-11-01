@@ -4,6 +4,7 @@ import useTranslation from 'next-translate/useTranslation';
 import NextLink from "next/link"
 import { EmailIcon, InfoOutlineIcon } from '@chakra-ui/icons';
 import { useColorModeValue } from '@chakra-ui/react';
+import { CgProfile } from 'react-icons/cg'
 
 export default function Home() {
     let { t } = useTranslation()
@@ -55,7 +56,7 @@ export default function Home() {
                                 <NextLink href="/about" passHref scroll={false}>
                                     <Button 
                                         borderRadius={0} 
-                                        rightIcon={<InfoOutlineIcon />} 
+                                        rightIcon={<CgProfile />} 
                                         border="1px solid"
                                         borderColor={useColorModeValue('sumi', 'shironeri')}
                                     >

@@ -1,3 +1,14 @@
 {
-    
+    "heading": "ABOUT ME",
+    "profileHead": "Profile",
+    "profile": "Full stack web developer based in Montreal, Canada. I am a curious and motivated individual, currently seeking new opportunities in the industry. In my spare time, I enjoy photography and learning Japanese.",
+    "educationHead": "Education",
+    "ed-one-title": "Le Wagon / 2021",
+    "ed-one-desc": "Part-time Web Development Bootcamp. Main stack learned was Ruby on Rails.",
+    "ed-two-title": "University of Montreal / 2019",
+    "ed-two-desc": "Bachelor of Arts in Asian Studies",
+    "ed-three-title": "Kanazawa University / 2016",
+    "ed-three-desc": "Semester exchange program (4 months) as part of my B.A.",
+    "jlpt": "JLPT N2 certificate acquired in 2017.",
+    "jlpt-button": "About the JLPT"
 }

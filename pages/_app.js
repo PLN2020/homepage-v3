@@ -6,8 +6,9 @@ import Loader from "../components/Loader"
 import { useState } from "react"
 
 import '@fontsource/noto-sans/400.css'
-import '@fontsource/shippori-mincho/800.css'
 import '@fontsource/poppins/700.css'
+import '@fontsource/noto-serif-jp/900.css'
+import '@fontsource/shippori-mincho/800.css'
 
 function MyApp({ Component, pageProps }) {
 
