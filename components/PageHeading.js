@@ -1,9 +1,9 @@
 import { Box, Heading, Icon } from "@chakra-ui/react"
 
-const PageHeading = ({ title, icon }) => {
+const PageHeading = ({ padding, title, icon }) => {
     return (
         <Box display="flex" alignItems="center">
-            <Heading p="2rem" as="h1" fontSize="8xl">
+            <Heading p={padding} as="h1" fontSize="8xl">
                 {title}
             </Heading>
             <Box pt="15px" >

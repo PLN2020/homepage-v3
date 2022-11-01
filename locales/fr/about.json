@@ -1,8 +1,8 @@
 {
     "heading": "À PROPOS",
-    "profileHead": "Profile",
+    "profile-head": "Profile",
     "profile": "Développeur web full stack situé à Montréal. Je suis une personne curieuse et motivée, actuellement à la recherche de nouvelles opportunités dans l'industrie. Dans mon temps libre, j'aime prendre des photos et apparendre le japonais.",
-    "educationHead": "Éducation",
+    "education-head": "Éducation",
     "ed-one-title": "Le Wagon / 2021",
     "ed-one-desc": "Bootcamp de développement Web à temps partiel. Le stack principal appris était Ruby on Rails.",
     "ed-two-title": "Université de Montréal / 2019",
@@ -10,5 +10,10 @@
     "ed-three-title": "Université de Kanazawa / 2016",
     "ed-three-desc": "Programme d'échange semestriel de 4 mois dans le cadre de mon baccalauréat.",
     "jlpt": "Certificat JLPT N2 acquérit en 2017.",
-    "jlpt-button": "À propos du JLPT"
+    "jlpt-button": "À propos du JLPT",
+    "photo-button": "Voir mes photos",
+    "toolkit-head": "Compétences",
+    "toolkit-tab-one": "Front-end",
+    "toolkit-tab-two": "Back-end",
+    "toolkit-tab-three": "Workflow"
 }

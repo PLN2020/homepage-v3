@@ -1,10 +1,11 @@
-import { Box, Grid, GridItem, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Grid, GridItem, Heading, Progress, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useColorModeValue, VStack } from "@chakra-ui/react";
 import useTranslation from "next-translate/useTranslation";
 import Section from "../components/Section";
 import { ImProfile } from 'react-icons/im'
 import PageHeading from "../components/PageHeading";
 import Profile from "../components/About/_profile";
 import Education from "../components/About/_education";
+import Toolkit from "../components/About/_toolkit";
 
 const About = () => {
     let { t } = useTranslation()
@@ -28,7 +29,11 @@ const About = () => {
                 borderColor={useColorModeValue('fujimurasaki', 'shion')}
             >
                 <Section>
-                    <PageHeading title={t('about:heading')} icon={ImProfile} />
+                    <PageHeading 
+                        padding="3rem"
+                        title={t('about:heading')} 
+                        icon={ImProfile} 
+                    />
                 </Section>
             </GridItem>
 
@@ -39,33 +44,15 @@ const About = () => {
                 borderLeft="1px solid"
                 borderColor={useColorModeValue('fujimurasaki', 'shion')}
             >
-                <Box p="2rem">
-                    <Section>
-                        <Heading as="h2">
-                            Toolkit
-                        </Heading>
-
-                        <Tabs>
-                            <TabList>
-                                <Tab>Front-end</Tab>
-                                <Tab>Back-end</Tab>
-                                <Tab>Workflow</Tab>
-                            </TabList>
-
-                            <TabPanels>
-                                <TabPanel>
-                                    HTML
-                                </TabPanel>
-                                <TabPanel>
-                                    Ruby
-                                </TabPanel>
-                                <TabPanel>
-                                    JIRA
-                                </TabPanel>
-                            </TabPanels>
-                        </Tabs>
-                    </Section>
-                </Box>
+                <Section>
+                    <Toolkit 
+                        padding="3rem"
+                        heading={t('about:toolkit-head')}
+                        tabOne={t('about:toolkit-tab-one')}
+                        tabTwo={t('about:toolkit-tab-two')}
+                        tabThree={t('about:toolkit-tab-three')}
+                    />
+                </Section>
             </GridItem>
 
             {/* Profile Section */}
@@ -75,7 +62,14 @@ const About = () => {
                 flexDirection="column"
             >
                 <Section>
-                    <Profile padding="2rem" heading={t('about:profileHead')} text={t('about:profile')} />
+                    <Profile 
+                        padding="3rem" 
+                        heading={t('about:profile-head')} 
+                        text={t('about:profile')}
+                        jlpt={t('about:jlpt')}
+                        jlptButton={t('about:jlpt-button')}
+                        photoButton={t('about:photo-button')}
+                    />
                 </Section>
             </GridItem>
 
@@ -88,16 +82,14 @@ const About = () => {
             >
                 <Section>
                     <Education 
-                        padding="2rem"
-                        heading={t('about:educationHead')}
+                        padding="3rem"
+                        heading={t('about:education-head')}
                         edOneHead={t('about:ed-one-title')}
                         edOneDesc={t('about:ed-one-desc')}
                         edTwoHead={t('about:ed-two-title')}
                         edTwoDesc={t('about:ed-two-desc')}
                         edThreeHead={t('about:ed-three-title')}
                         edThreeDesc={t('about:ed-three-desc')}
-                        jlpt={t('about:jlpt')}
-                        jlptButton={t('about:jlpt-button')}
                     />
                 </Section>
             </GridItem>
