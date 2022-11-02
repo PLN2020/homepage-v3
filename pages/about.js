@@ -13,21 +13,21 @@ const About = () => {
     return (
         <Grid
             as="section"
-            h="calc(100vh - 140px)"
+            h={{ base: "auto", lg: "calc(100vh - 140px)" }}
             w="100%"
-            templateRows='repeat(3, 1fr)'
-            templateColumns='repeat(3, 1fr)'
+            templateRows={{ base: "100%, 100%, 100%, 100%", lg: "repeat(3, 1fr)" }}
+            templateColumns={{ base: '1fr', lg: 'repeat(3, 1fr)' }}
             gap={0}
         >
             {/* Page Heading Section */}
             <GridItem 
-                rowSpan={1} 
-                colSpan={2} 
+                rowSpan={1}
+                colSpan={{ base: "1", lg: "2" }}
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
                 borderBottom="1px solid"
-                borderColor={useColorModeValue('fujimurasaki', 'shion')}
+                // borderColor={useColorModeValue('fujimurasaki', 'shion')}
             >
                 <Section>
                     <PageHeading 
@@ -40,10 +40,11 @@ const About = () => {
 
             {/* Toolkit Section */}
             <GridItem 
-                rowSpan={3} 
+                rowSpan={3}
                 colSpan={1} 
-                borderLeft="1px solid"
-                borderColor={useColorModeValue('fujimurasaki', 'shion')}
+                borderLeft={{ base: "none", lg: "1px solid" }}
+                borderBottom={{ base: "1px solid", lg: "none" }}
+                // borderColor={useColorModeValue('fujimurasaki', 'shion')}
             >
                 <Section>
                     <Toolkit 
@@ -58,9 +59,11 @@ const About = () => {
 
             {/* Profile Section */}
             <GridItem 
-                rowSpan={1} 
+                rowSpan={2} 
                 colSpan={1} 
                 flexDirection="column"
+                borderBottom={{ base: "1px solid", lg: "none" }}
+                // borderColor={useColorModeValue('fujimurasaki', 'shion')}
             >
                 <Section>
                     <Profile 
@@ -78,8 +81,8 @@ const About = () => {
             <GridItem 
                 rowSpan={2}
                 colSpan={1}
-                borderLeft="1px solid"
-                borderColor={useColorModeValue('fujimurasaki', 'shion')}
+                borderLeft={{ base: "none", lg: "1px solid" }}
+                // borderColor={useColorModeValue('fujimurasaki', 'shion')}
             >
                 <Section>
                     <Education 

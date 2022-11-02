@@ -28,6 +28,7 @@ const LinkItem = ({ router, href, children, ...props }) => {
                 fontWeight={isCurrentPath ? 'bold' : 'normal'}
                 color={isCurrentPath ? activeColor : inactiveColor}
                 fontFamily="Poppins"
+                fontSize={{ lg: "sm", xl: "md"}}
                 transition="all 0.2s ease-out"
                 _hover={{
                     color: "shion"

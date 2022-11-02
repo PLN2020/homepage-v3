@@ -9,7 +9,7 @@ const Profile = ({ padding, heading, text, jlpt, jlptButton, photoButton }) => {
             <Heading as="h2" pb="1rem">
                 {heading}
             </Heading>
-            <Text textAlign="left" fontSize="sm" pb="1rem">
+            <Text textAlign="left" fontSize={{ base: "md", lg: "sm" }} pb="1rem">
                 {text}
             </Text>
             <NextLink href="/photography" passHref scroll={false}>
@@ -28,7 +28,7 @@ const Profile = ({ padding, heading, text, jlpt, jlptButton, photoButton }) => {
                 <Divider borderColor={useColorModeValue('fujimurasaki', 'shion')} opacity={1}/>
             </Box>
             
-            <Text pb="1rem" fontSize="sm">
+            <Text pb="1rem" fontSize={{ base: "md", lg: "sm" }}>
                 {jlpt}
             </Text>
             <Button 

@@ -12,26 +12,26 @@ const Education = ({ padding, heading, edOneHead, edOneDesc, edTwoHead, edTwoDes
                 align='stretch'
             >
                 <Box>
-                    <Heading as="h3" fontSize="md" pb="4px">
+                    <Heading as="h3" fontSize={{ base: "lg", lg: "sm" }} pb="4px">
                         {edOneHead}
                     </Heading>
-                    <Text fontSize="sm">
+                    <Text fontSize={{ base: "md", lg: "sm" }}>
                         {edOneDesc}
                     </Text>
                 </Box>
                 <Box>
-                    <Heading as="h3" fontSize="md" pb="4px">
+                    <Heading as="h3" fontSize={{ base: "lg", lg: "sm" }} pb="4px">
                         {edTwoHead}
                     </Heading>
-                    <Text fontSize="sm">
+                    <Text fontSize={{ base: "md", lg: "sm" }}>
                         {edTwoDesc}
                     </Text>
                 </Box>
                 <Box>
-                    <Heading as="h3" fontSize="md" pb="4px">
+                    <Heading as="h3" fontSize={{ base: "lg", lg: "sm" }} pb="4px">
                         {edThreeHead}
                     </Heading>
-                    <Text fontSize="sm">
+                    <Text fontSize={{ base: "md", lg: "sm" }}>
                         {edThreeDesc}
                     </Text>
                 </Box>

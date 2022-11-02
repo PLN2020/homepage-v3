@@ -16,7 +16,7 @@ const Navbar = () => {
             w="100%"
             height="100px"
             borderBottom="1px solid"
-            borderBottomColor={useColorModeValue('fujimurasaki', 'shion')}
+            // borderBottomColor={useColorModeValue('fujimurasaki', 'shion')}
         >
             {/* Logo Section */}
             <Flex 
@@ -34,7 +34,7 @@ const Navbar = () => {
                 p="3rem 2rem"
                 gap="1rem"
                 borderLeft="1px solid"
-                borderLeftColor={useColorModeValue('fujimurasaki', 'shion')}
+                // borderLeftColor={useColorModeValue('fujimurasaki', 'shion')}
                 align="center"
                 justify="center"
                 boxSizing="border-box"
@@ -60,7 +60,7 @@ const Navbar = () => {
                 p="3rem 2rem"
                 gap="1.5rem"
                 borderLeft="1px solid"
-                borderLeftColor={useColorModeValue('fujimurasaki', 'shion')}
+                // borderLeftColor={useColorModeValue('fujimurasaki', 'shion')}
                 align="center"
                 justify="center"
                 boxSizing="border-box"
@@ -103,8 +103,8 @@ const Navbar = () => {
             <Flex
                 p="3rem 2rem"
                 gap="1rem"
-                borderLeft={{ base: "none", md: "1px solid #8F77B5" }}
-                borderLeftColor={useColorModeValue('fujimurasaki', 'shion')}
+                borderLeft={{ base: "none", md: "1px solid" }}
+                // borderLeftColor={useColorModeValue('fujimurasaki', 'shion')}
                 align="center"
                 justify="center"
                 boxSizing="border-box"

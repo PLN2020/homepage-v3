@@ -8,7 +8,8 @@ const Loader = () => {
     return (
         <Section>
             <Box
-                h={{base: "auto", md: "calc(100vh - 140px)"}}
+                // h={{base: "auto", md: "calc(100vh - 140px)"}}
+                h="calc(100vh - 140px)"
                 display="flex"
                 flexDirection="column"
                 justifyContent="center"
