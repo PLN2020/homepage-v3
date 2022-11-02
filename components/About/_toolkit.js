@@ -1,5 +1,5 @@
 import { Box, Heading, Tabs, TabList, Tab, TabPanels, TabPanel, VStack, Progress, Text, Flex } from "@chakra-ui/react"
-import { FrontEndData, BackEndData, WorkflowData } from "./_toolkit-data"
+import { FrontEndData, BackEndData, WorkflowData } from "./toolkit-data"
 
 const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
     return (
