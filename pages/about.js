@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, Heading, Progress, Tab, TabList, TabPanel, TabPanels, Tabs, Text, useColorModeValue, VStack } from "@chakra-ui/react";
+import { Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
 import useTranslation from "next-translate/useTranslation";
 import Section from "../components/Section";
 import { ImProfile } from 'react-icons/im'
@@ -23,7 +23,8 @@ const About = () => {
             <GridItem 
                 rowSpan={1} 
                 colSpan={2} 
-                display="flex" 
+                display="flex"
+                justifyContent="center"
                 alignItems="center"
                 borderBottom="1px solid"
                 borderColor={useColorModeValue('fujimurasaki', 'shion')}
