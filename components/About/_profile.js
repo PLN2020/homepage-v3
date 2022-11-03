@@ -1,7 +1,8 @@
 import { Box, Heading, Text, Button, Link, useColorModeValue, Divider } from "@chakra-ui/react"
 import { ExternalLinkIcon } from "@chakra-ui/icons"
 import NextLink from 'next/link'
-import { FaCameraRetro } from "react-icons/fa"
+import { FaCameraRetro, FaExternalLinkAlt } from "react-icons/fa"
+import ButtonLink from "../ButtonLink"
 
 const Profile = ({ padding, heading, text, jlpt, jlptButton, photoButton }) => {
     return (
@@ -31,6 +32,7 @@ const Profile = ({ padding, heading, text, jlpt, jlptButton, photoButton }) => {
             <Text pb="1rem" fontSize={{ base: "md", lg: "sm" }}>
                 {jlpt}
             </Text>
+            
             <Button 
                 variant="outline" 
                 borderRadius={0} 

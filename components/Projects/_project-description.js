@@ -17,7 +17,7 @@ const ProjectDescription = ({ padding, projectTitle, projectYear, projectDesc, p
                 </Badge>
             </Box>
 
-            <Text fontSize='md' mb='1rem'>
+            <Text fontSize='sm' mb='1rem'>
                 {projectDesc}
             </Text>
 
