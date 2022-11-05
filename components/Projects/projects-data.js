@@ -1,5 +1,13 @@
 import { FaCss3, FaHtml5, FaJs } from "react-icons/fa";
 import { SiHeroku, SiRubyonrails } from "react-icons/si";
+import ProjectsDescription from './_project-description'
+
+export const ProjectsData = [
+    {
+        img: "",
+        desc: <ProjectsDescription />
+    }
+]
 
 export const BraidStack = [
     {
