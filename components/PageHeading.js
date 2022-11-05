@@ -1,6 +1,6 @@
 import { Box, Heading, Icon, useColorModeValue } from "@chakra-ui/react"
 
-const PageHeading = ({ padding, title, icon }) => {
+const PageHeading = ({ padding, title, icon, fontSize, iconSize }) => {
     return (
         <Box 
             p={padding} 
@@ -9,7 +9,7 @@ const PageHeading = ({ padding, title, icon }) => {
         >
             <Heading 
                 as="h1" 
-                fontSize={{ base: "4xl", lg:"8xl" }}
+                fontSize= {fontSize} //{{ base: "4xl", lg:"8xl" }}
             >
                 {title}
             </Heading>
@@ -17,8 +17,8 @@ const PageHeading = ({ padding, title, icon }) => {
             <Box pt={{ base: "10px", lg:"15px" }} ml={{ base: "1rem", lg: "2rem" }}>
                 <Icon 
                     as={icon} 
-                    w={{ base: "2rem", lg: "5rem"}} 
-                    h={{ base: "2rem", lg: "5rem"}}
+                    w={iconSize} //{{ base: "2rem", lg: "5rem"}} 
+                    h={iconSize}
                     color={useColorModeValue('fujimurasaki', 'shion')}
                 />
             </Box>

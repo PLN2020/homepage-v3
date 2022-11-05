@@ -21,7 +21,7 @@ const NavButton = ({ ariaLabel, width, height, direction, onClick }) => {
             onClick={onClick}
         >
             <ChakraBox
-                whileHover={{ x: 10 }}
+                whileHover={{ x: direction === "next" ? 10 : -10 }}
                 whileTap={{ scale: 1.02, y: "0.2rem" }}
             >
                 {arrow}

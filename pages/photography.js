@@ -1,85 +1,125 @@
-import { Box, IconButton, Image } from "@chakra-ui/react";
-import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
-import { PhotoData } from "../components/Photography/photo-data";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
-import ChakraBox from "../components/ChakraBox";
+import { Grid, GridItem } from '@chakra-ui/react';
+import React from 'react'
+import { FaCameraRetro } from 'react-icons/fa';
+import NavButton from '../components/NavButton';
+import PageHeading from '../components/PageHeading';
+import Section from '../components/Section';
+import { useState } from 'react';
 import useMeasure from 'react-use-measure'
-import NavButton from "../components/NavButton";
-import Carousel from "../components/Carousel";
+import Carousel from '../components/Carousel';
+import { PhotoData } from '../components/Photography/photo-data';
+import useTranslation from 'next-translate/useTranslation';
+import PhotoDesc from '../components/Photography/_photo-desc';
 
 const Photography = () => {
-    let [count, setCount] = useState(1)
+    let [count, setCount] = useState(0)
     let [ref, { width }] = useMeasure()
     let prev = usePrevious(count)
     let direction = count > prev ? 1 : -1
+    let { t } = useTranslation()
 
     return (
-        <Box
+        <Grid
+            as="section"
             h="calc(100vh - 140px)"
+            w="100%"
+            templateRows='repeat(3, 1fr)'
+            templateColumns='repeat(3, 1fr)'
+            gap={0}
         >
-            <Box display="flex" justifyContent="space-between" pt={4} px={4}>
+            {/* Image Section */}
+            <GridItem 
+                ref={ref}
+                rowSpan={3}
+                colSpan={2}
+                // borderBottom="1px solid"
+                overflow="hidden" 
+                position="relative"
+                zIndex={1}
+                w="calc(200vw / 3)"
+            >
+                <Carousel
+                    width="100%"
+                    height="100%"
+                    count={count}
+                    custom={{direction, width}}
+                    variants={variants}
+                    bgImage={PhotoData[Math.abs(count) % PhotoData.length].src}
+                />
+            </GridItem>  
+
+            {/* Nav Section */}
+            <GridItem 
+                rowSpan={1} 
+                colSpan={1}
+                display="flex" 
+                alignItems="center"
+                justifyContent="center"
+                borderLeft="1px solid"
+                borderBottom="1px solid"
+            >
                 <NavButton 
                     ariaLabel='Previous'
-                    width="40px"
-                    height="40px"
+                    width="calc(100vw / 6)"
+                    height="calc((100vh - 140px) / 3)"
                     direction="previous"
                     onClick={() => setCount(count - 1)}
                 />
-                <NavButton 
+                <NavButton
                     ariaLabel='Next'
-                    width="40px"
-                    height="40px"
+                    width="calc(100vw / 6)"
+                    height="calc((100vh - 140px) / 3)"
                     direction="next"
                     onClick={() => setCount(count + 1)}
                 />
-            </Box>
+            </GridItem>
 
-            <Box display="flex" justifyContent="center" mt={8}>
-                <Box 
-                    ref={ref} 
-                    w="400px" 
-                    h="400px" 
-                    bg="gray.700" 
-                    display="flex" 
-                    justifyContent='center' 
-                    alignItems='center' 
-                    overflow="hidden" 
-                    position="relative"
+            {/* Photo Desc Section */}
+            <GridItem 
+                rowSpan={1} 
+                colSpan={1}
+                display="flex"
+                alignItems="center"
+                justifyContent="space-around"
+                borderLeft="1px solid"
+                borderBottom="1px solid"
+            >
+                <Carousel
+                    width="auto"
+                    height="auto"
+                    count={count}
+                    custom={{direction, width}}
+                    variants={variants}
                 >
-                    {/* <AnimatePresence custom={{direction, width}}>
-                        <ChakraBox
-                            key={count}
-                            variants={variants}
-                            initial='enter'
-                            animate='center'
-                            exit='exit'
-                            custom={{direction, width}}
-                            // transition={{ duration: 1 }}
-                            display='flex'
-                            position="absolute"
-                            h="380px"
-                            w="380px"
-                            alignItems='center' 
-                            justifyContent='center' 
-                            bgImage={PhotoData[Math.abs(count) % PhotoData.length].src}
-                            bgPosition="center"
-                            bgSize="cover"
-                        >
-                            {count}        
-                        </ChakraBox>
-                    </AnimatePresence> */}
-                    <Carousel 
-                        width="380px"
-                        height="380px"
-                        count={count}
-                        custom={{direction, width}}
-                        variants={variants}
-                        bgImage={PhotoData[Math.abs(count) % PhotoData.length].src}
+                    <PhotoDesc 
+                        city={t(`photography:${PhotoData[Math.abs(count) % PhotoData.length].city}`)}
+                        year={PhotoData[Math.abs(count) % PhotoData.length].year}
+                        camera={PhotoData[Math.abs(count) % PhotoData.length].camera}
+                        number={PhotoData[Math.abs(count) % PhotoData.length].number}
                     />
-                </Box>
-            </Box>
-        </Box>
+                </Carousel>
+            </GridItem>
+
+            {/* Page Heading Section */}
+            <GridItem 
+                rowSpan={1} 
+                colSpan={1} 
+                display="flex" 
+                alignItems="center"
+                justifyContent="center"
+                borderLeft="1px solid"
+            >
+                <Section>
+                    <PageHeading 
+                        padding="3rem"
+                        title={t('photography:heading')}
+                        icon={FaCameraRetro}
+                        fontSize={{ base: "xl", xl: "2rem"}}
+                        iconSize={{ base: "1rem", xl: "2rem"}}
+                    />
+                </Section>
+            </GridItem>
+        </Grid>
     )
 }
 
