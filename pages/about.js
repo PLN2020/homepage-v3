@@ -13,7 +13,7 @@ const About = () => {
     return (
         <Grid
             as="section"
-            h={{ base: "auto", lg: "calc(100vh - 140px)" }}
+            h={{ base: "auto", xl: "calc(100vh - 140px)" }}
             w="100%"
             templateRows={{ base: "100%, 100%, 100%, 100%", lg: "repeat(3, 1fr)" }}
             templateColumns={{ base: '1fr', lg: 'repeat(3, 1fr)' }}
