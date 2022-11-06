@@ -1,12 +1,12 @@
 import { AnimatePresence } from "framer-motion";
 import ChakraBox from "../components/ChakraBox";
 
-const Carousel = ({ width, height, count, custom, variants, bgImage, children }) => {
+const Carousel = ({ width, height, key, custom, variants, bgImage, children }) => {
 
     return (
         <AnimatePresence custom={custom}>
             <ChakraBox
-                key={count}
+                key={key}
                 variants={variants}
                 initial='enter'
                 animate='center'

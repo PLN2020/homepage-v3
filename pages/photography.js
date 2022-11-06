@@ -1,4 +1,4 @@
-import { Grid, GridItem } from '@chakra-ui/react';
+import { Grid, GridItem, useColorModeValue } from '@chakra-ui/react';
 import React from 'react'
 import { FaCameraRetro } from 'react-icons/fa';
 import NavButton from '../components/NavButton';
@@ -10,13 +10,17 @@ import Carousel from '../components/Carousel';
 import { PhotoData } from '../components/Photography/photo-data';
 import useTranslation from 'next-translate/useTranslation';
 import PhotoDesc from '../components/Photography/_photo-desc';
+import { wrap } from 'popmotion'
 
 const Photography = () => {
-    let [count, setCount] = useState(0)
     let [ref, { width }] = useMeasure()
-    let prev = usePrevious(count)
-    let direction = count > prev ? 1 : -1
     let { t } = useTranslation()
+
+    const [[page, direction], setPage] = useState([0, 0])
+    const index = wrap(0, PhotoData.length, page)
+    const paginate = (newDirection) => {
+        setPage([page + newDirection, newDirection])
+    } 
 
     return (
         <Grid
@@ -32,19 +36,19 @@ const Photography = () => {
                 ref={ref}
                 rowSpan={3}
                 colSpan={2}
-                // borderBottom="1px solid"
                 overflow="hidden" 
                 position="relative"
-                zIndex={1}
+                zIndex={2}
                 w="calc(200vw / 3)"
+                bg={useColorModeValue('shironeri', 'sumi')}
             >
                 <Carousel
                     width="100%"
                     height="100%"
-                    count={count}
+                    key={page}
                     custom={{direction, width}}
                     variants={variants}
-                    bgImage={PhotoData[Math.abs(count) % PhotoData.length].src}
+                    bgImage={PhotoData[index].src}
                 />
             </GridItem>  
 
@@ -63,14 +67,14 @@ const Photography = () => {
                     width="calc(100vw / 6)"
                     height="calc((100vh - 140px) / 3)"
                     direction="previous"
-                    onClick={() => setCount(count - 1)}
+                    onClick={() => paginate(-1)}
                 />
                 <NavButton
                     ariaLabel='Next'
                     width="calc(100vw / 6)"
                     height="calc((100vh - 140px) / 3)"
                     direction="next"
-                    onClick={() => setCount(count + 1)}
+                    onClick={() => paginate(1)}
                 />
             </GridItem>
 
@@ -83,19 +87,22 @@ const Photography = () => {
                 justifyContent="space-around"
                 borderLeft="1px solid"
                 borderBottom="1px solid"
+                // position="relative"
+                zIndex={1}
             >
                 <Carousel
                     width="auto"
                     height="auto"
-                    count={count}
+                    // count={count}
+                    key={page}
                     custom={{direction, width}}
                     variants={variants}
                 >
                     <PhotoDesc 
-                        city={t(`photography:${PhotoData[Math.abs(count) % PhotoData.length].city}`)}
-                        year={PhotoData[Math.abs(count) % PhotoData.length].year}
-                        camera={PhotoData[Math.abs(count) % PhotoData.length].camera}
-                        number={PhotoData[Math.abs(count) % PhotoData.length].number}
+                        city={t(`photography:${PhotoData[index].city}`)}
+                        year={PhotoData[index].year}
+                        camera={PhotoData[index].camera}
+                        number={PhotoData[index].number}
                     />
                 </Carousel>
             </GridItem>
@@ -124,18 +131,23 @@ const Photography = () => {
 }
 
 let variants = {
-    enter: ({direction, width}) => ({ x: direction * width }),
-    center: { x: 0 },
-    exit: ({direction, width}) => ({ x: direction * -width }),
-}
-
-function usePrevious(state) {
-    let [tuple, setTuple] = useState([null, state]) // [ prev, current ]
-    if (tuple[1] !== state) {
-        setTuple([tuple[1], state])
-    }
-
-    return tuple[0]
+    enter: ({direction, width}) => (
+        {
+            x: direction > 0 ? -width : width,
+            opacity: 0
+        }
+    ),
+    center: {
+        x: 0,
+        opacity: 1
+    },
+    exit: ({direction, width}) => (
+        {
+            zIndex: 0,
+            x: direction < 0 ? -width : width,
+            opacity: 0
+        }
+    ),
 }
 
 export default Photography
