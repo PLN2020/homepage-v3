@@ -20,26 +20,27 @@ const Photography = () => {
     const index = wrap(0, PhotoData.length, page)
     const paginate = (newDirection) => {
         setPage([page + newDirection, newDirection])
-    } 
+    }
 
     return (
         <Grid
             as="section"
-            h="calc(100vh - 140px)"
+            h={{ base: "auto", lg: "calc(100vh - 140px)" }}
             w="100%"
-            templateRows='repeat(3, 1fr)'
-            templateColumns='repeat(3, 1fr)'
+            templateRows={{ base: "100%, 100%, 100%, 100%", lg: "repeat(3, 1fr)" }}
+            templateColumns={{ base: '1fr', lg: 'repeat(3, 1fr)' }}
             gap={0}
         >
             {/* Image Section */}
             <GridItem 
                 ref={ref}
-                rowSpan={3}
-                colSpan={2}
+                rowSpan={{ base: "1", lg: "3" }}
+                colSpan={{ base: "1", lg: "2" }}
                 overflow="hidden" 
                 position="relative"
                 zIndex={2}
-                w="calc(200vw / 3)"
+                w={{ base: "100%", lg: "calc(200vw / 3)"}}
+                h={{ base: "50vh", lg: "100%" }}
                 bg={useColorModeValue('shironeri', 'sumi')}
             >
                 <Carousel
@@ -56,23 +57,25 @@ const Photography = () => {
             <GridItem 
                 rowSpan={1} 
                 colSpan={1}
+                h={{ md: "25vh", lg: "auto" }}
                 display="flex" 
                 alignItems="center"
                 justifyContent="center"
-                borderLeft="1px solid"
+                borderLeft={{base: "none", lg: "1px solid"}}
                 borderBottom="1px solid"
+                zIndex={4}
             >
                 <NavButton 
                     ariaLabel='Previous'
-                    width="calc(100vw / 6)"
-                    height="calc((100vh - 140px) / 3)"
+                    width={{ base: "50vw", lg: "calc(100vw / 6)" }}
+                    height={{ base: "calc(100vh/6)", md: "25vh", lg: "calc((100vh - 140px) / 3)"}}
                     direction="previous"
                     onClick={() => paginate(-1)}
                 />
                 <NavButton
                     ariaLabel='Next'
-                    width="calc(100vw / 6)"
-                    height="calc((100vh - 140px) / 3)"
+                    width={{ base: "50vw", lg: "calc(100vw / 6)" }}
+                    height={{ base: "calc(100vh/6)", md: "25vh", lg: "calc((100vh - 140px) / 3)"}}
                     direction="next"
                     onClick={() => paginate(1)}
                 />
@@ -82,10 +85,11 @@ const Photography = () => {
             <GridItem 
                 rowSpan={1} 
                 colSpan={1}
+                h={{ base: "10rem", lg: "auto" }}
                 display="flex"
                 alignItems="center"
                 justifyContent="space-around"
-                borderLeft="1px solid"
+                borderLeft={{ base: "none", lg: "1px solid"}}
                 borderBottom="1px solid"
                 // position="relative"
                 zIndex={1}
@@ -93,7 +97,6 @@ const Photography = () => {
                 <Carousel
                     width="auto"
                     height="auto"
-                    // count={count}
                     key={page}
                     custom={{direction, width}}
                     variants={variants}
@@ -114,7 +117,7 @@ const Photography = () => {
                 display="flex" 
                 alignItems="center"
                 justifyContent="center"
-                borderLeft="1px solid"
+                borderLeft={{ base: "none", lg: "1px solid"}}
             >
                 <Section>
                     <PageHeading 

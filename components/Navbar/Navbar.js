@@ -110,9 +110,9 @@ const Navbar = () => {
                 boxSizing="border-box"
                 w={{ base: "50%", lg: "calc(100% / 6)" }}
             >
-                <ToggleLocaleButton />
+                <Box zIndex={5}><ToggleLocaleButton /></Box>
                 <ThemeToggleButton />
-                <Box display={{ base: 'inline-block', lg: 'none' }}>
+                <Box display={{ base: 'inline-block', lg: 'none' }} zIndex={5}>
                     <MobileMenu />
                 </Box>
             </Flex>
