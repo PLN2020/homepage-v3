@@ -14,6 +14,9 @@ const ThemeToggleButton = () => {
             _active={{
                 transform: 'scale(1.05) translateY(0.2rem)'
             }}
+            borderRadius="none"
+            // border="1px solid"
+            // borderColor={useColorModeValue('sumi', 'shironeri')}
         />
     )
 }

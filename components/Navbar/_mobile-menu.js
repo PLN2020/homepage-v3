@@ -1,5 +1,5 @@
 import { ExternalLinkIcon, HamburgerIcon } from "@chakra-ui/icons"
-import { IconButton, Link, Menu, MenuButton, MenuItem, MenuList, Flex } from "@chakra-ui/react"
+import { IconButton, Link, Menu, MenuButton, MenuItem, MenuList, Flex, useColorModeValue } from "@chakra-ui/react"
 import useTranslation from 'next-translate/useTranslation'
 import NextLink from 'next/link'
 import { FaFlickr, FaGithub, FaLinkedin } from "react-icons/fa"
@@ -14,9 +14,16 @@ const MobileMenu = () => {
                 aria-label='Menu'
                 icon={<HamburgerIcon />}
                 variant='outline'
+                borderColor={useColorModeValue('sumi', 'shironeri')}
+                borderRadius="none"
             />
 
-            <MenuList fontFamily="Poppins">
+            <MenuList 
+                fontFamily="Poppins"
+                borderRadius="none" 
+                bg={useColorModeValue('shironeri', 'sumi')}
+                borderColor={useColorModeValue('sumi', 'shironeri')}
+            >
                 <NextLink href="/about" passHref>
                     <MenuItem>
                         <Link>

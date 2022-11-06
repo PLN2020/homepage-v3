@@ -102,7 +102,7 @@ const Navbar = () => {
             {/* Buttons Sections */}
             <Flex
                 p="3rem 2rem"
-                gap="1rem"
+                gap={{ base: "0.5rem", lg: "1rem"}}
                 borderLeft={{ base: "none", md: "1px solid" }}
                 // borderLeftColor={useColorModeValue('fujimurasaki', 'shion')}
                 align="center"
