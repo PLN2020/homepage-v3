@@ -9,24 +9,40 @@ const NavButton = ({ ariaLabel, width, height, direction, onClick }) => {
     ? "←"
     : ""
 
+    const arrowMotion = {
+        rest: {
+            x: 0
+        },
+        hover: {
+            x: direction === "next" ? 15 : -15,
+            transition: {
+                duration: 0.2,
+                type: "tween",
+                ease: "easeOut"
+            },
+        },
+    }
+
     return (
-        <Button 
-            variant="outline"
-            aria-label={ariaLabel}
-            border="none"
-            borderRadius={0}
-            w={width}
-            h={height}
-            fontSize="6xl"
-            onClick={onClick}
-        >
-            <ChakraBox
-                whileHover={{ x: direction === "next" ? 10 : -10 }}
-                whileTap={{ scale: 1.02, y: "0.2rem" }}
+        <ChakraBox initial="rest" whileHover="hover" animate="rest">
+            <Button 
+                variant="outline"
+                aria-label={ariaLabel}
+                border="none"
+                borderRadius={0}
+                w={width}
+                h={height}
+                fontSize="6xl"
+                onClick={onClick}
             >
-                {arrow}
-            </ChakraBox>
-        </Button>
+                <ChakraBox
+                    // whileTap={{ scale: 1.02, y: "0.2rem" }}
+                    variants={arrowMotion}
+                >
+                    {arrow}
+                </ChakraBox>
+            </Button>
+        </ChakraBox>
     )
 }
 
