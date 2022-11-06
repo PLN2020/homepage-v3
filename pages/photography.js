@@ -42,6 +42,7 @@ const Photography = () => {
                 w={{ base: "100%", lg: "calc(200vw / 3)"}}
                 h={{ base: "50vh", lg: "100%" }}
                 bg={useColorModeValue('shironeri', 'sumi')}
+                borderBottom={{ base: "1px solid", lg: "none"}}
             >
                 <Carousel
                     width="100%"

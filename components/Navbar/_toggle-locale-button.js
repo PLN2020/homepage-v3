@@ -1,4 +1,4 @@
-import { Menu, MenuButton, MenuItem, MenuList, Button, Link, Center } from "@chakra-ui/react"
+import { Menu, MenuButton, MenuItem, MenuList, Button, Link, Center, useColorModeValue } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import NextLink from "next/link"
 
@@ -15,11 +15,21 @@ const ToggleLocaleButton = () => {
 
     return (
         <Menu>
-            <MenuButton as={Button}>
+            <MenuButton 
+                as={Button} 
+                size="md" 
+                borderRadius="none" 
+                variant="outline"
+                borderColor={useColorModeValue('sumi', 'shironeri')}
+            >
                 <Center>{language}</Center>
             </MenuButton>
             
-            <MenuList>
+            <MenuList 
+                borderRadius="none" 
+                bg={useColorModeValue('shironeri', 'sumi')}
+                borderColor={useColorModeValue('sumi', 'shironeri')}
+            >
                 {router.locales.map((locale) => (
                     <NextLink href={router.asPath} locale={locale} key={locale} passHref>
                         <MenuItem as={Link}>
