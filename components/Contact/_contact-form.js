@@ -10,7 +10,8 @@ const ContactForm = ({
     alertSuccessTitle, 
     alertSuccessDesc,
     alertErrorTitle,
-    alertErrorDesc
+    alertErrorDesc,
+    buttonLoadingText
  }) => {
 
     const [name, setName] = useState('')
@@ -96,7 +97,7 @@ const ContactForm = ({
                     <Button
                         type="submit"
                         isLoading={submitted}
-                        loadingText="Submitting..."
+                        loadingText={buttonLoadingText}
                         borderRadius="none"
                         borderColor={useColorModeValue('sumi', 'shironeri')}
                         variant="outline"

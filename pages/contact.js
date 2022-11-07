@@ -39,6 +39,7 @@ const Contact = () => {
                         alertSuccessDesc={t('contact:alert-success-desc')}
                         alertErrorTitle={t('contact:alert-error-title')}
                         alertErrorDesc={t('contact:alert-error-desc')}
+                        buttonLoadingText={t('contact:button-loading-text')}
                     />
                 </Section>
             </Box>

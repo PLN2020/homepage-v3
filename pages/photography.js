@@ -59,6 +59,7 @@ const Photography = () => {
                 rowSpan={1} 
                 colSpan={1}
                 h={{ md: "25vh", lg: "auto" }}
+                w={{ lg: "calc(100vw / 3)"}}
                 display="flex" 
                 alignItems="center"
                 justifyContent="center"

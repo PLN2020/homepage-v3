@@ -8,5 +8,6 @@
     "alert-success-title": "Succès!",
     "alert-success-desc": "Votre message a été envoyé.",
     "alert-error-title": "Erreur!",
-    "alert-error-desc": "L'envoi de votre message a échoué."
+    "alert-error-desc": "L'envoi de votre message a échoué.",
+    "button-loading-text": "En cours..."
 }
