@@ -1,98 +1,87 @@
-import { Box, Button, Grid, GridItem, Image, VStack } from "@chakra-ui/react";
+import { Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
 import Section from "../components/Section";
 import PageHeading from "../components/PageHeading";
 import useTranslation from "next-translate/useTranslation";
-import { FaDatabase, FaGithub, FaYoutube } from "react-icons/fa";
+import { FaDatabase } from "react-icons/fa";
 import ProjectDescription from "../components/Projects/_project-description";
-import { BraidStack } from "../components/Projects/projects-data";
-import ButtonLink from "../components/ButtonLink";
-import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import useMeasure from 'react-use-measure'
+import { wrap } from 'popmotion'
+import { ProjectsData } from "../components/Projects/projects-data";
+import Carousel from '../components/Carousel';
+import NavButton from "../components/NavButton";
 
 const Projects = () => {
     let { t } = useTranslation()
-    let [count, setCount] = useState(1)
+
+    let [ref, { width }] = useMeasure()
+    const [[page, direction], setPage] = useState([0, 0])
+    const index = wrap(0, ProjectsData.length, page)
+    const paginate = (newDirection) => {
+        setPage([page + newDirection, newDirection])
+    }
 
     return (
         <Grid
             as="section"
-            h="calc(100vh - 140px)"
+            h={{ base: "auto", lg: "calc(100vh - 140px)" }}
             w="100%"
-            templateRows='repeat(3, 1fr)'
-            templateColumns='repeat(3, 1fr)'
+            templateRows={{ base: "repeat(6, 1fr)", lg: "repeat(3, 1fr)" }}
+            templateColumns={{ base: '1fr', lg: 'repeat(3, 1fr)' }}
             gap={0}
-            flexGrow={1}
-            position="relative"
         >
             {/* Project Description Section */}
-            <AnimatePresence>
-                <GridItem 
-                    rowSpan={2}
-                    colSpan={1}
-                    borderBottom="1px solid"
+            <GridItem 
+                rowSpan={{ base: "3", lg: "2"}}
+                colSpan={1}
+                borderBottom="1px solid"
+                ref={ref}
+            >
+                <Carousel
+                    width="auto"
+                    height="auto"
+                    key={page}
+                    custom={{direction, width}}
+                    variants={variants}
                 >
-                    <Section>
-                        <Box 
-                            p='3rem' 
-                            as={motion.div}
-                        >
-                            <ProjectDescription 
-                                padding="0"
-                                projectTitle="Braid"
-                                projectYear="2021"
-                                projectDesc={t('projects:braid-description')}
-                                projectStack={BraidStack}
-                            />
-                            <VStack align='start' spacing='1rem'>
-                                <ButtonLink 
-                                    icon={<FaGithub />}
-                                    href="https://github.com/AntoineBoucherCodes/Braid"
-                                    text={t('projects:braid-source')}
-                                />
-                                <ButtonLink 
-                                    icon={<FaYoutube />}
-                                    href="https://www.youtube.com/watch?v=7VBFMMoaGkA&t=1528s"
-                                    text={t('projects:braid-youtube')}
-                                />
-                            </VStack>
-                        </Box>
-                    </Section>
-                </GridItem>  
+                    <ProjectDescription 
+                        padding={{ base: "2rem", lg: "3rem"}}
+                        width={{base: "100%", lg: "calc(100vw / 3)"}}
+                        projectTitle={ProjectsData[index].projectTitle}
+                        projectYear={ProjectsData[index].projectYear}
+                        projectDesc={t(`projects:${ProjectsData[index].projectDesc}`)}
+                        projectStack={ProjectsData[index].projectStack}
+                        firstLinkIcon={ProjectsData[index].firstLinkIcon}
+                        firstLink={ProjectsData[index].firstLink}
+                        firstLinkText={t(`projects:${ProjectsData[index].firstLinkText}`)}
+                        secondLinkIcon={ProjectsData[index].secondLinkIcon}
+                        secondLink={ProjectsData[index].secondLink}
+                        secondLinkText={t(`projects:${ProjectsData[index].secondLinkText}`)}
+                    />
+                </Carousel>
+            </GridItem>  
 
-                {/* Project Image Section */}
-                <GridItem 
-                    rowSpan={2} 
-                    colSpan={2} 
-                    borderLeft="1px solid"
-                    borderBottom="1px solid"
-                    overflow='hidden'
-                >
-                    <Section>
-                    <Box
-                        key="1"
-                        as={motion.div}
-                        intial={{ x: 100 }}
-                        animate={{ x: 0 }}
-                    >
-                        <Image 
-                            src="https://res.cloudinary.com/ditoikfqn/image/upload/v1664611782/NextJS-Portfolio/braid_pn2hjz.jpg" 
-                            alt="Braid website image" 
-                        />
-                    </Box>
-                    <Box
-                        key="0"
-                        as={motion.div}
-                        intial={{ x: 100 }}
-                        animate={{ x: 0 }}
-                    >
-                        <Image 
-                            src="https://res.cloudinary.com/ditoikfqn/image/upload/v1663102401/NextJS-Portfolio/background_p0bazx.jpg" 
-                            alt="Braid website image" 
-                        />
-                    </Box>
-                    </Section>
-                </GridItem>
-            </AnimatePresence>
+            {/* Project Image Section */}
+            <GridItem 
+                rowSpan={{ base: "1", lg: "2"}} 
+                colSpan={{ base: "1", lg: "2"}} 
+                borderLeft={{ base: "none", lg: "1px solid"}}
+                borderBottom="1px solid"
+                overflow='hidden'
+                ref={ref}
+                position="relative"
+                bg={useColorModeValue('shironeri', 'sumi')}
+                zIndex={2}
+            >
+                <Carousel
+                    width="100%"
+                    height="100%"
+                    key={page}
+                    custom={{direction, width}}
+                    variants={variants}
+                    bgImage={ProjectsData[index].img}
+                />
+            </GridItem>
 
             {/* Navigation Section */}
             <GridItem 
@@ -101,73 +90,65 @@ const Projects = () => {
                 display="flex"
                 alignItems="center"
                 justifyContent="space-around"
+                borderBottom={{ base: "1px solid", lg: "none" }}
             >
-                <Section>
-                    <Box>
-                        <Button 
-                            variant="outline"
-                            aria-label="Previous project"
-                            border="none"
-                            borderRadius={0}
-                            w="calc(100vw / 6)"
-                            h="calc((100vh - 140px) / 3)"
-                            fontSize="6xl"
-                            onClick={() => setCount(count - 1)}
-                        >
-                            <Box
-                                as={motion.div}
-                                whileHover={{ translateX: -10 }}
-                                whileTap={{ scale: 1.02, translateY: "0.2rem" }}
-                            >
-                                ←
-                            </Box>
-                        </Button>
-                    </Box>
-                </Section>
-
-                <Section>
-                    <Box>
-                        <Button 
-                            variant="outline"
-                            aria-label="Next project"
-                            border="none"
-                            borderRadius={0}
-                            w="calc(100vw / 6)"
-                            h="calc((100vh - 140px) / 3)"
-                            fontSize="6xl"
-                            onClick={() => setCount(count + 1)}
-                        >
-                            <Box
-                                as={motion.div}
-                                whileHover={{ translateX: 10 }}
-                                whileTap={{ scale: 1.02, translateY: "0.2rem" }}
-                            >
-                                →
-                            </Box>
-                        </Button>
-                    </Box>
-                </Section>
+                <NavButton
+                    ariaLabel='Previous'
+                    width={{ base: "50vw", lg: "calc(100vw / 6)" }}
+                    height={{ base: "calc(100vh/6)", md: "25vh", lg: "calc((100vh - 140px) / 3)"}}
+                    direction="previous"
+                    onClick={() => paginate(-1)}
+                />
+                <NavButton
+                    ariaLabel='Next'
+                    width={{ base: "50vw", lg: "calc(100vw / 6)" }}
+                    height={{ base: "calc(100vh/6)", md: "25vh", lg: "calc((100vh - 140px) / 3)"}}
+                    direction="next"
+                    onClick={() => paginate(1)}
+                />
             </GridItem>
 
             {/* Page Heading Section */}
             <GridItem 
                 rowSpan={1} 
-                colSpan={2} 
+                colSpan={{ base: "1", lg: "2"}}
                 display="flex" 
                 alignItems="center"
                 justifyContent="center"
-                borderLeft="1px solid"
+                borderLeft={{ base: "none", lg: "1px solid"}}
             >
                 <Section>
                     <PageHeading 
                         padding="3rem"
                         title={t('projects:heading')} 
                         icon={FaDatabase}
+                        fontSize={{ base: "4xl", xl:"8xl" }}
+                        iconSize={{ base: "2rem", xl: "5rem"}}
                     />
                 </Section>
             </GridItem>
         </Grid>
     )
+}
+
+let variants = {
+    enter: ({direction, width}) => (
+        {
+            x: direction > 0 ? width : -width,
+            opacity: 0
+        }
+    ),
+    center: {
+        x: 0,
+        opacity: 1
+    },
+    exit: ({direction, width}) => (
+        {
+            zIndex: 0,
+            x: direction < 0 ? width : -width,
+            opacity: 0
+        }
+    ),
 }
 
 export default Projects

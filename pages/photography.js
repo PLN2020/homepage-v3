@@ -13,9 +13,9 @@ import PhotoDesc from '../components/Photography/_photo-desc';
 import { wrap } from 'popmotion'
 
 const Photography = () => {
-    let [ref, { width }] = useMeasure()
     let { t } = useTranslation()
-
+    
+    let [ref, { width }] = useMeasure()
     const [[page, direction], setPage] = useState([0, 0])
     const index = wrap(0, PhotoData.length, page)
     const paginate = (newDirection) => {

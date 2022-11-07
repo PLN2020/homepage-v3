@@ -35,7 +35,7 @@ const About = () => {
                         title={t('about:heading')} 
                         icon={ImProfile}
                         fontSize={{ base: "4xl", xl:"8xl" }}
-                        iconSize={{ base: "2rem", xl: "5rem"}} 
+                        iconSize={{ base: "2rem", xl: "5rem"}}
                     />
                 </Section>
             </GridItem>

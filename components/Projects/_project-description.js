@@ -1,9 +1,22 @@
-import { Box, Heading, Badge, Text, Tooltip, HStack } from "@chakra-ui/react"
-import { SiChakraui } from "react-icons/si"
+import { Box, Heading, Badge, Text, Tooltip, HStack, VStack } from "@chakra-ui/react"
+import ButtonLink from "../ButtonLink"
 
-const ProjectDescription = ({ padding, projectTitle, projectYear, projectDesc, projectStack }) => {
+const ProjectDescription = ({ 
+    padding, 
+    width,
+    projectTitle, 
+    projectYear, 
+    projectDesc, 
+    projectStack, 
+    firstLinkIcon, 
+    firstLink, 
+    firstLinkText,
+    secondLinkIcon,
+    secondLink,
+    secondLinkText 
+}) => {
     return (
-        <Box p={padding}>
+        <Box p={padding} w={width}>
             <Box display='flex' alignItems='center' mb='1rem'>
                 <Heading
                     as="h2"
@@ -21,7 +34,6 @@ const ProjectDescription = ({ padding, projectTitle, projectYear, projectDesc, p
                 {projectDesc}
             </Text>
 
-            {/* <Box display='flex' alignItems='center' mb='1rem'> */}
             <HStack spacing='15px' mb='1rem'>
                 {projectStack.map((item) => {
                     return(
@@ -42,7 +54,19 @@ const ProjectDescription = ({ padding, projectTitle, projectYear, projectDesc, p
                     )
                 })}
             </HStack>
-            {/* </Box> */}
+
+            <VStack align='start' spacing='1rem'>
+                <ButtonLink 
+                    icon={firstLinkIcon}
+                    href={firstLink}
+                    text={firstLinkText}
+                />
+                <ButtonLink 
+                    icon={secondLinkIcon}
+                    href={secondLink}
+                    text={secondLinkText}
+                />
+            </VStack>
         </Box>
     )
 }
