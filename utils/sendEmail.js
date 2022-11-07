@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+// import fetch from 'node-fetch'
 
 const SENDGRID_API = 'https://api.sendgrid.com/v3/mail/send'
 const NEXT_PUBLIC_SENDGRID_API_KEY = process.env.NEXT_PUBLIC_SENDGRID_API_KEY
