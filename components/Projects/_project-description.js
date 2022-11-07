@@ -16,7 +16,7 @@ const ProjectDescription = ({
     secondLinkText 
 }) => {
     return (
-        <Box p={padding} w={width}>
+        <Box p={padding} w={width} as="section">
             <Box display='flex' alignItems='center' mb='1rem'>
                 <Heading
                     as="h2"

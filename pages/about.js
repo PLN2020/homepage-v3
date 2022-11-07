@@ -1,4 +1,4 @@
-import { Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 import useTranslation from "next-translate/useTranslation";
 import Section from "../components/Section";
 import { ImProfile } from 'react-icons/im'

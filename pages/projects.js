@@ -38,8 +38,6 @@ const Projects = () => {
                 ref={ref}
             >
                 <Carousel
-                    width="auto"
-                    height="auto"
                     key={page}
                     custom={{direction, width}}
                     variants={variants}

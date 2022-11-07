@@ -7,7 +7,7 @@ export const FrontEndData = [
     {
         name: "React",
         icon: <Icon as={FaReact} />,
-        level: "65"
+        level: "60"
     },
     {
         name: "Next.JS",
@@ -17,27 +17,27 @@ export const FrontEndData = [
     {
         name: "Html5",
         icon: <Icon as={FaHtml5} />,
-        level: "75"
+        level: "70"
     },
     {
         name: "CSS",
         icon: <Icon as={FaCss3} />,
-        level: "75"
+        level: "65"
     },
     {
         name: "Javascript",
         icon: <Icon as={FaJs} />,
-        level: "60"
+        level: "50"
     },
     {
         name: "Bootstrap",
         icon: <Icon as={FaBootstrap} />,
-        level: "65"
+        level: "60"
     },
     {
         name: "Chakra UI",
         icon: <Icon as={SiChakraui} />,
-        level: "75"
+        level: "70"
     }
 ]
 
@@ -45,12 +45,12 @@ export const BackEndData = [
     {
         name: "Ruby",
         icon: <Icon as={DiRuby} />,
-        level: "70"
+        level: "50"
     },
     {
         name: "Rails",
         icon: <Icon as={SiRubyonrails} />,
-        level: "70"
+        level: "50"
     },
     {
         name: "Firebase",
@@ -60,12 +60,12 @@ export const BackEndData = [
     {
         name: "Heroku",
         icon: <Icon as={SiHeroku} />,
-        level: "50"
+        level: "40"
     },
     {
         name: "PostgreSQL",
         icon: <Icon as={SiPostgresql} />,
-        level: "50"
+        level: "30"
     },
     {
         name: "Yarn",
@@ -83,17 +83,17 @@ export const WorkflowData = [
     {
         name: "Confluence",
         icon: <Icon as={FaConfluence} />,
-        level: "85"
+        level: "80"
     },
     {
         name: "Trello",
         icon: <Icon as={FaTrello} />,
-        level: "65"
+        level: "55"
     },
     {
         name: "Miro",
         icon: <Icon as={SiMiro} />,
-        level: "70"
+        level: "65"
     },
     {
         name: "Figma",
@@ -103,7 +103,7 @@ export const WorkflowData = [
     {
         name: "GitHub",
         icon: <Icon as={FaGithub} />,
-        level: "75"
+        level: "60"
     },
     {
         name: "Slack",

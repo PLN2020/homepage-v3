@@ -3,7 +3,10 @@ import { FrontEndData, BackEndData, WorkflowData } from "./toolkit-data"
 
 const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
     return (
-        <Box p={padding} as="section">
+        <Box 
+            p={padding} 
+            as="section"
+        >
             <Heading as="h2" pb="1rem">
                 {heading}
             </Heading>
