@@ -1,5 +1,6 @@
-import { FaCss3, FaGithub, FaHome, FaHtml5, FaJs, FaYoutube } from "react-icons/fa";
-import { SiHeroku, SiRubyonrails } from "react-icons/si";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { FaCss3, FaGithub, FaHome, FaHtml5, FaJs, FaReact, FaYoutube } from "react-icons/fa";
+import { SiChakraui, SiHeroku, SiNextdotjs, SiRubyonrails, SiVercel } from "react-icons/si";
 
 export const ProjectsData = [
     {
@@ -8,25 +9,21 @@ export const ProjectsData = [
         projectDesc: "homepage-v3-description", 
         projectStack: [
             {
-                label: "Ruby on Rails",
-                icon: <SiRubyonrails />,
+                label: "Next JS",
+                icon: <SiNextdotjs />,
             },
             {
-                label: "Html5",
-                icon: <FaHtml5 />,
+                label: "Chakra UI",
+                icon: <SiChakraui />,
             },
             {
-                label: "CSS",
-                icon: <FaCss3 />,
+                label: "React",
+                icon: <FaReact />,
             },
             {
-                label: "Javascript",
-                icon: <FaJs />,
+                label: "Vercel",
+                icon: <SiVercel />,
             },
-            {
-                label: "Heroku",
-                icon: <SiHeroku />,
-            }
         ],
         firstLinkIcon: <FaGithub />,
         firstLink: "https://github.com/PLN2020/homepage-v3",
@@ -42,31 +39,27 @@ export const ProjectsData = [
         projectDesc: "homepage-v2-description", 
         projectStack: [
             {
-                label: "Ruby on Rails",
-                icon: <SiRubyonrails />,
+                label: "Next JS",
+                icon: <SiNextdotjs />,
             },
             {
-                label: "Html5",
-                icon: <FaHtml5 />,
+                label: "Chakra UI",
+                icon: <SiChakraui />,
             },
             {
-                label: "CSS",
-                icon: <FaCss3 />,
+                label: "React",
+                icon: <FaReact />,
             },
             {
-                label: "Javascript",
-                icon: <FaJs />,
+                label: "Vercel",
+                icon: <SiVercel />,
             },
-            {
-                label: "Heroku",
-                icon: <SiHeroku />,
-            }
         ],
-        firstLinkIcon: <FaHome />,
-        firstLink: "https://www.plnguyen.dev/",
+        firstLinkIcon: <FaGithub />,
+        firstLink: "https://github.com/PLN2020/nextjs-chakraui-hp",
         firstLinkText: "homepage-v2-first-link-text",
-        secondLinkIcon: <FaGithub />,
-        secondLink: "https://github.com/PLN2020/homepage-v3",
+        secondLinkIcon: <ExternalLinkIcon />,
+        secondLink: "https://nextjs-chakraui-hp.vercel.app/",
         secondLinkText: "homepage-v2-second-link-text",
         img: "https://res.cloudinary.com/ditoikfqn/image/upload/v1667780799/NextJS-Portfolio/homepage-v2_ixoni4.png",
     },
@@ -96,35 +89,12 @@ export const ProjectsData = [
                 icon: <SiHeroku />,
             }
         ],
-        firstLinkIcon: <FaYoutube />,
-        firstLink: "https://www.youtube.com/watch?v=7VBFMMoaGkA&t=1528s",
+        firstLinkIcon: <FaGithub />,
+        firstLink: "https://github.com/AntoineBoucherCodes/Braid",
         firstLinkText: "braid-first-link-text",
-        secondLinkIcon: <FaGithub />,
-        secondLink: "https://github.com/AntoineBoucherCodes/Braid",
+        secondLinkIcon: <FaYoutube />,
+        secondLink: "https://www.youtube.com/watch?v=7VBFMMoaGkA&t=1528s",
         secondLinkText: "braid-second-link-text",
         img: "https://res.cloudinary.com/ditoikfqn/image/upload/v1664611782/NextJS-Portfolio/braid_pn2hjz.jpg",
-    },
-]
-
-export const BraidStack = [
-    {
-        label: "Ruby on Rails",
-        icon: <SiRubyonrails />,
-    },
-    {
-        label: "Html5",
-        icon: <FaHtml5 />,
-    },
-    {
-        label: "CSS",
-        icon: <FaCss3 />,
-    },
-    {
-        label: "Javascript",
-        icon: <FaJs />,
-    },
-    {
-        label: "Heroku",
-        icon: <SiHeroku />,
     },
 ]
