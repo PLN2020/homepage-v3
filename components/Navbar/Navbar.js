@@ -16,13 +16,12 @@ const Navbar = () => {
             w="100%"
             height="100px"
             borderBottom="1px solid"
-            // borderBottomColor={useColorModeValue('fujimurasaki', 'shion')}
         >
             {/* Logo Section */}
             <Flex 
                 padding="3rem 2rem"
                 align="center"
-                w={{ base: "50%", lg: "calc(100% / 3)" }}
+                w={{ base: "50%", lg: "calc(100vw / 3)" }}
                 boxSizing="border-box"
             >
                 <Logo />
@@ -34,11 +33,10 @@ const Navbar = () => {
                 p="3rem 2rem"
                 gap="1rem"
                 borderLeft="1px solid"
-                // borderLeftColor={useColorModeValue('fujimurasaki', 'shion')}
                 align="center"
                 justify="center"
                 boxSizing="border-box"
-                w="calc(100% / 3)"
+                w="calc(100vw / 3)"
             >
                 <LinkItem href="/about">
                     {t('common:section-one')}
@@ -60,11 +58,10 @@ const Navbar = () => {
                 p="3rem 2rem"
                 gap="1.5rem"
                 borderLeft="1px solid"
-                // borderLeftColor={useColorModeValue('fujimurasaki', 'shion')}
                 align="center"
                 justify="center"
                 boxSizing="border-box"
-                w="calc(100% / 6)"
+                w="calc(100vw / 6)"
                 fontSize="1.5rem"
             >
                 <Link
@@ -104,11 +101,10 @@ const Navbar = () => {
                 p="3rem 2rem"
                 gap={{ base: "0.5rem", lg: "1rem"}}
                 borderLeft={{ base: "none", md: "1px solid" }}
-                // borderLeftColor={useColorModeValue('fujimurasaki', 'shion')}
                 align="center"
                 justify="center"
                 boxSizing="border-box"
-                w={{ base: "50%", lg: "calc(100% / 6)" }}
+                w={{ base: "50%", lg: "calc(100vw / 6)" }}
             >
                 <Box zIndex={5}><ToggleLocaleButton /></Box>
                 <ThemeToggleButton />
