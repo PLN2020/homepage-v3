@@ -10,11 +10,12 @@ const Contact = () => {
     return (
         <Box
             as="section"
-            h="calc(100vh - 140px)"
+            h={{ sm: "auto", lg: "calc(100vh - 140px)"}}
             display="flex"
+            flexDirection={{ base: "column", lg: "row" }}
         >
             <Box 
-                w="50vw"
+                w={{ sm: "100vw", lg: "50vw"}}
                 h="inherit"
             >
                 <Box
@@ -29,26 +30,26 @@ const Contact = () => {
                             padding="3rem"
                             title="CONTACT"
                             icon={EmailIcon}
-                            fontSize={{ base: "4xl", lg:"7xl" }}
-                            iconSize={{ base: "2rem", lg: "5rem"}} 
+                            fontSize={{ base: "4xl", lg: "6xl", xl:"7xl" }}
+                            iconSize={{ base: "2rem", lg: "4rem", xl: "5rem" }} 
                         />
                     </Section>
                 </Box>
 
-                
-                    <Box
-                        p="3rem"
-                    >
-                        <Section>
-                            <ContactForm />
-                        </Section>
-                    </Box>
+                <Box
+                    p="3rem"
+                >
+                    <Section>
+                        <ContactForm />
+                    </Section>
+                </Box>
             </Box>
 
             <Box 
                 w="50vw"
                 h="inherit"
                 borderLeft="1px solid"
+                display={{ base: "none", lg: "inline-block"}}
             >
                 <ContactMap />  
             </Box>
