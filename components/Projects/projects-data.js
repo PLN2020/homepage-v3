@@ -28,18 +28,18 @@ export const ProjectsData = [
                 icon: <SiHeroku />,
             }
         ],
-        firstLinkIcon: <FaHome />,
-        firstLink: "https://www.plnguyen.dev/",
+        firstLinkIcon: <FaGithub />,
+        firstLink: "https://github.com/PLN2020/homepage-v3",
         firstLinkText: "homepage-v3-first-link-text",
-        secondLinkIcon: <FaGithub />,
-        secondLink: "https://github.com/PLN2020/homepage-v3",
+        secondLinkIcon: <FaHome />,
+        secondLink: "https://www.plnguyen.dev/",
         secondLinkText: "homepage-v3-second-link-text",
         img: "https://res.cloudinary.com/ditoikfqn/image/upload/v1667780360/NextJS-Portfolio/homepage-v3_ju7vrn.jpg",
     },
     {
         projectTitle: "Homepage v2",
         projectYear: "2022", 
-        projectDesc: "description", 
+        projectDesc: "homepage-v2-description", 
         projectStack: [
             {
                 label: "Ruby on Rails",
@@ -64,10 +64,10 @@ export const ProjectsData = [
         ],
         firstLinkIcon: <FaHome />,
         firstLink: "https://www.plnguyen.dev/",
-        firstLinkText: "homepage-v3-first-link-text",
+        firstLinkText: "homepage-v2-first-link-text",
         secondLinkIcon: <FaGithub />,
         secondLink: "https://github.com/PLN2020/homepage-v3",
-        secondLinkText: "homepage-v3-second-link-text",
+        secondLinkText: "homepage-v2-second-link-text",
         img: "https://res.cloudinary.com/ditoikfqn/image/upload/v1667780799/NextJS-Portfolio/homepage-v2_ixoni4.png",
     },
     {

@@ -1,6 +1,12 @@
 {
     "heading": "PROJECTS",
+    "homepage-v3-description": "Third iteration of my homepage. Multi-page app built with Next JS, Chakra UI and Framer Motion. Grid Layout was heavily inspired by dylanbrouwer's layout.",
+    "homepage-v3-first-link-text": "View source",
+    "homepage-v3-second-link-text": "Visit the homepage",
+    "homepage-v2-description": "Second iteration of my homepage. Single-page app built with Next JS and Chakra-UI. Discontinued in favor of v3.",
+    "homepage-v2-first-link-text": "View source",
+    "homepage-v2-second-link-text": "Visit the website",
     "braid-description": "E-commerce MVP built using Ruby on Rails by a team of three as the final project for the part-time Web Development bootcamp at Le Wagon.",
-    "braid-source": "View source",
-    "braid-youtube": "Youtube presentation"
+    "braid-first-link-text": "View source",
+    "braid-second-link-text": "Youtube presentation"
 }

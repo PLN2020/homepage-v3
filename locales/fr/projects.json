@@ -1,6 +1,12 @@
 {
     "heading": "PROJETS",
+    "homepage-v3-description": "Troisième itération de ma page d'accueil. Application multi-pages construite avec Next JS, Chakra UI et Framer Motion. Le Grid Layout a été fortement inspiré par la mise en page de dylanbrouwer.",
+    "homepage-v3-first-link-text": "Voir la source",
+    "homepage-v3-second-link-text": "À la page d'accueil",
+    "homepage-v2-description": "Deuxième itération de ma page d'accueil. Application à page unique construite avec Next JS et Chakra Ui. Abandonné en faveur de v3.",
+    "homepage-v2-first-link-text": "Voir la source",
+    "homepage-v2-second-link-text": "Visité le site web",
     "braid-description": "MVP d'un site E-commerce créé avec Ruby on Rails par une équipe de 3 dans le cadre du projet final pour le Bootcamp en développement web à temps-partiel chez Le Wagon.",
-    "braid-source": "Voir la source",
-    "braid-youtube": "Présentation sur Youtube"
+    "braid-first-link-text": "Voir la source",
+    "braid-second-link-text": "Présentation sur Youtube"
 }

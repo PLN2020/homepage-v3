@@ -1,6 +1,12 @@
 {
     "heading": "プロジェクト",
+    "homepage-v3-description": "三回目のホームページです。Next JS、Chakra UI、Framer Motionで構築したマルチページアプリ。グリッドレイアウトはdylanbrouwerのレイアウトに大きくインスパイアされたものです。",
+    "homepage-v3-first-link-text": "ソースコードへ",
+    "homepage-v3-second-link-text": "ホームページへ",
+    "homepage-v2-description": "二回目のホームページです。Next JSとChakra-UIで構築したシングルページアプリ。v3では廃止となりました。",
+    "homepage-v2-first-link-text": "ソースコードへ",
+    "homepage-v2-second-link-text": "ウェブサイトへ",
     "braid-description": "Le WagonのパートタイムWeb開発ブートキャンプの最終プロジェクトとして、3人のチームでRuby on Railsを使用して構築されたEコマースMVPです。",
-    "braid-source": "ソースコードへ",
-    "braid-youtube": "YouTubeのプレゼンテーションへ"
+    "braid-first-link-text": "ソースコードへ",
+    "braid-second-link-text": "YouTubeのプレゼンテーションへ"
 }
