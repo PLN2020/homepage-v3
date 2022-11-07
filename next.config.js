@@ -8,5 +8,6 @@ module.exports = {
     ...nextTranslate(),
     env: {
         NEXT_PUBLIC_MAPBOX_API_TOKEN: process.env.NEXT_PUBLIC_MAPBOX_API_TOKEN,
+        NEXT_PUBLIC_SENDGRID_API_KEY: process.env.NEXT_PUBLIC_SENDGRIP_API_KEY,
     }
 }

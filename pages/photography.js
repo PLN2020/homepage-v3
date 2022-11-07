@@ -45,7 +45,7 @@ const Photography = () => {
                 borderBottom={{ base: "1px solid", lg: "none"}}
             >
                 <Carousel
-                    width="100%"
+                    width={{ base: "100%", lg: "calc(200vw / 3)"}}
                     height="100%"
                     key={page}
                     custom={{direction, width}}
