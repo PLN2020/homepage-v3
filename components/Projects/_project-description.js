@@ -22,6 +22,7 @@ const ProjectDescription = ({
                     as="h2"
                     lineHeight='tight'
                     noOfLines={1}
+                    fontSize={{ base: "3xl", lg: "2xl", xl: "4xl"}}
                 >
                     {projectTitle}&nbsp;
                 </Heading>
@@ -30,7 +31,10 @@ const ProjectDescription = ({
                 </Badge>
             </Box>
 
-            <Text fontSize='md' mb='1rem'>
+            <Text 
+                fontSize={{ base: "md", lg: "sm", xl: "md" }}
+                mb='1rem'
+            >
                 {projectDesc}
             </Text>
 

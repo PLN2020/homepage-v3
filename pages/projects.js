@@ -26,13 +26,13 @@ const Projects = () => {
             as="section"
             h={{ base: "auto", lg: "calc(100vh - 140px)" }}
             w="100%"
-            templateRows={{ base: "repeat(6, 1fr)", lg: "repeat(3, 1fr)" }}
+            templateRows={{ base: "repeat(6, 1fr)", md: "repeat(5, 1fr)", lg: "repeat(3, 1fr)" }}
             templateColumns={{ base: '1fr', lg: 'repeat(3, 1fr)' }}
             gap={0}
         >
             {/* Project Description Section */}
             <GridItem 
-                rowSpan={{ base: "3", lg: "2"}}
+                rowSpan={{ base: "3", md: "2", lg: "2"}}
                 colSpan={1}
                 borderBottom="1px solid"
                 ref={ref}
@@ -122,8 +122,8 @@ const Projects = () => {
                         padding="3rem"
                         title={t('projects:heading')} 
                         icon={FaDatabase}
-                        fontSize={{ base: "4xl", xl:"8xl" }}
-                        iconSize={{ base: "2rem", xl: "5rem"}}
+                        fontSize={{ base: "4xl", lg: "6xl", xl:"8xl" }}
+                        iconSize={{ base: "2rem", lg: "3rem", xl: "5rem"}}
                     />
                 </Section>
             </GridItem>
