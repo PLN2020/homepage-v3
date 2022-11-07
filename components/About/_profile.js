@@ -5,7 +5,7 @@ import { FaCameraRetro } from "react-icons/fa"
 
 const Profile = ({ padding, heading, text, jlpt, jlptButton, photoButton }) => {
     return (
-        <Box p={padding} overflow='scroll'>
+        <Box p={padding}>
             <Heading as="h2" pb="1rem">
                 {heading}
             </Heading>
