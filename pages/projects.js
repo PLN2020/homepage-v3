@@ -61,13 +61,13 @@ const Projects = () => {
 
             {/* Project Image Section */}
             <GridItem 
+                ref={ref}
                 rowSpan={{ base: "1", lg: "2"}} 
                 colSpan={{ base: "1", lg: "2"}} 
+                overflow='hidden'
+                position="relative"
                 borderLeft={{ base: "none", lg: "1px solid"}}
                 borderBottom="1px solid"
-                overflow='hidden'
-                ref={ref}
-                position="relative"
                 bg={useColorModeValue('shironeri', 'sumi')}
                 zIndex={2}
             >

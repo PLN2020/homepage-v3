@@ -38,14 +38,15 @@ const Photography = () => {
                 colSpan={{ base: "1", lg: "2" }}
                 overflow="hidden" 
                 position="relative"
-                zIndex={2}
                 w={{ base: "100%", lg: "calc(200vw / 3)"}}
-                h={{ base: "50vh", lg: "100%" }}
-                bg={useColorModeValue('shironeri', 'sumi')}
+                h={{ base: "50vh", lg: "calc(100vh - 140px)" }}
                 borderBottom={{ base: "1px solid", lg: "none"}}
+                bg={useColorModeValue('shironeri', 'sumi')}
+                zIndex={2}
             >
                 <Carousel
-                    width={{ base: "100%", lg: "calc(200vw / 3)"}}
+                    // width={{ base: "100%", lg: "calc(200vw / 3)"}}
+                    width="100%"
                     height="100%"
                     key={page}
                     custom={{direction, width}}
