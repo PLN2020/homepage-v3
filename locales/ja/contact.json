@@ -4,5 +4,9 @@
     "name": "名前",
     "email": "メールアドレス",
     "message": "メッセージ",
-    "button": "送信"
+    "button": "送信",
+    "alert-success-title": "成功！",
+    "alert-success-desc": "メッセージが送信されました。",
+    "alert-error-title": "エラー！",
+    "alert-error-desc": "メッセージの送信に失敗しました。"
 }

@@ -35,6 +35,10 @@ const Contact = () => {
                         emailText={t('contact:email')}
                         messageText={t('contact:message')}
                         buttonText={t('contact:button')}
+                        alertSuccessTitle={t('contact:alert-success-title')}
+                        alertSuccessDesc={t('contact:alert-success-desc')}
+                        alertErrorTitle={t('contact:alert-error-title')}
+                        alertErrorDesc={t('contact:alert-error-desc')}
                     />
                 </Section>
             </Box>

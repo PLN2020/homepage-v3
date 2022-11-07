@@ -4,5 +4,9 @@
     "name": "Name",
     "email": "Email",
     "message": "Message",
-    "button": "Send"
+    "button": "Send",
+    "alert-success-title": "Success!",
+    "alert-success-desc": "Your message was sent.",
+    "alert-error-title": "Error!",
+    "alert-error-desc": "Your message failed to send."
 }

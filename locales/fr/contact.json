@@ -4,5 +4,9 @@
     "name": "Nom",
     "email": "Adresse courriel",
     "message": "Message",
-    "button": "Envoyer"
+    "button": "Envoyer",
+    "alert-success-title": "Succès!",
+    "alert-success-desc": "Votre message a été envoyé.",
+    "alert-error-title": "Erreur!",
+    "alert-error-desc": "L'envoi de votre message a échoué."
 }

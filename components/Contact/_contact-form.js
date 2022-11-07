@@ -1,7 +1,18 @@
 import { Box, Divider, FormControl, FormLabel, Input, Text, Textarea, useColorModeValue, VStack, Button, Flex, Alert, AlertIcon, AlertTitle, AlertDescription } from "@chakra-ui/react"
 import { useState } from "react"
 
-const ContactForm = ({ preface, nameText, emailText, messageText, buttonText }) => {
+const ContactForm = ({ 
+    preface, 
+    nameText, 
+    emailText, 
+    messageText, 
+    buttonText, 
+    alertSuccessTitle, 
+    alertSuccessDesc,
+    alertErrorTitle,
+    alertErrorDesc
+ }) => {
+
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
@@ -39,7 +50,7 @@ const ContactForm = ({ preface, nameText, emailText, messageText, buttonText }) 
         <form action='submit' method='POST' onSubmit={handleOnSubmit}>
             <VStack align="left" spacing="1rem">
                 <Box>
-                    <Text>{preface}</Text>
+                    <Text fontSize="sm">{preface}</Text>
                 </Box>
 
                 <Divider borderColor={useColorModeValue('fujimurasaki', 'shion')} />
@@ -98,14 +109,14 @@ const ContactForm = ({ preface, nameText, emailText, messageText, buttonText }) 
                     {status === "success" ?
                         <Alert status="success">
                             <AlertIcon />
-                            <AlertTitle mr={2}>Success!</AlertTitle>
-                            <AlertDescription>Your message has been sent.</AlertDescription>
+                            <AlertTitle mr={2}>{alertSuccessTitle}</AlertTitle>
+                            <AlertDescription>{alertSuccessDesc}</AlertDescription>
                         </Alert>
                         : status === "error" ?
                             <Alert status="error">
                                 <AlertIcon />
-                                <AlertTitle mr={2}>Error</AlertTitle>
-                                <AlertDescription>Your message was unable to be sent.</AlertDescription>
+                                <AlertTitle mr={2}>{alertErrorTitle}</AlertTitle>
+                                <AlertDescription>{alertErrorDesc}</AlertDescription>
                             </Alert>
                         : null
                     }
