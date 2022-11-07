@@ -4,8 +4,10 @@ import ContactForm from "../components/Contact/_contact-form";
 import ContactMap from "../components/Contact/_contact-map";
 import PageHeading from "../components/PageHeading";
 import Section from "../components/Section";
+import useTranslation from "next-translate/useTranslation";
 
 const Contact = () => {
+    let { t } = useTranslation()
 
     return (
         <Box
@@ -28,7 +30,7 @@ const Contact = () => {
                     <Section>
                         <PageHeading 
                             padding="3rem"
-                            title="CONTACT"
+                            title={t('contact:heading')}
                             icon={EmailIcon}
                             fontSize={{ base: "4xl", lg: "6xl", xl:"7xl" }}
                             iconSize={{ base: "2rem", lg: "4rem", xl: "5rem" }} 
@@ -36,11 +38,14 @@ const Contact = () => {
                     </Section>
                 </Box>
 
-                <Box
-                    p="3rem"
-                >
+                <Box p="3rem">
                     <Section>
-                        <ContactForm />
+                        <ContactForm 
+                            status={t('contact:status')}
+                            name={t('contact:name')}
+                            email={t('contact:email')}
+                            message={t('contact:message')}
+                        />
                     </Section>
                 </Box>
             </Box>
@@ -58,3 +63,13 @@ const Contact = () => {
 }
 
 export default Contact
+
+export async function getServerSideProps() {
+    await new Promise((resolve) => {
+        setTimeout(resolve, 1000);
+    });
+
+    return {
+        props: {},
+    };
+}

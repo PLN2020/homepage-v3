@@ -1,41 +1,41 @@
 import { Box, Divider, FormControl, FormLabel, Input, Text, Textarea, useColorModeValue, VStack } from "@chakra-ui/react"
 
-const ContactForm = () => {
+const ContactForm = ({ status, name, email, message }) => {
     return (
         <VStack align="left">
             <Box>
-                <Text>Currently accepting freelance opportunities. Open to web developer roles.</Text>
+                <Text>{status}</Text>
             </Box>
 
             <Divider borderColor={useColorModeValue('fujimurasaki', 'shion')} />
 
             <FormControl>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>{name}</FormLabel>
                 <Input 
                     type='name' 
                     borderRadius='none' 
                     borderColor={useColorModeValue('sumi', 'shironeri')} 
-                    placeholder='Name'
+                    placeholder={name}
                 />
             </FormControl>
 
             <FormControl>
-                <FormLabel>Email</FormLabel>
+                <FormLabel>{email}</FormLabel>
                 <Input 
                     type='email' 
                     borderRadius='none' 
                     borderColor={useColorModeValue('sumi', 'shironeri')}
-                    placeholder='Email'
+                    placeholder={email}
                 />
             </FormControl>
 
             <FormControl>
-                <FormLabel>Message</FormLabel>
+                <FormLabel>{message}</FormLabel>
                 <Textarea 
                     type='message'
                     borderRadius='none' 
                     borderColor={useColorModeValue('sumi', 'shironeri')} 
-                    placeholder='Message'
+                    placeholder={message}
                     minH='10vh'
                     maxH='15vh'
                 />
