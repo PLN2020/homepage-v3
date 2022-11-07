@@ -30,11 +30,11 @@ const Contact = () => {
                         iconSize={{ base: "2rem", lg: "4rem", xl: "5rem" }} 
                     />
                     <ContactForm 
-                        status={t('contact:status')}
-                        name={t('contact:name')}
-                        email={t('contact:email')}
-                        message={t('contact:message')}
-                        button={t('contact:button')}
+                        preface={t('contact:status')}
+                        nameText={t('contact:name')}
+                        emailText={t('contact:email')}
+                        messageText={t('contact:message')}
+                        buttonText={t('contact:button')}
                     />
                 </Section>
             </Box>
