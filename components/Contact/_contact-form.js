@@ -30,8 +30,8 @@ const ContactForm = ({
 
         setSubmitted(true)
 
-        fetch('/api/mail', {
-            method: 'post',
+        await fetch('/api/mail', {
+            method: 'POST',
             body: JSON.stringify(formData)
         }).then((res) => {
             if (res.status === 200) {

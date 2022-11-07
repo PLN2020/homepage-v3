@@ -1,16 +1,15 @@
 import { Box, Heading, Text, Button, Link, useColorModeValue, Divider } from "@chakra-ui/react"
 import { ExternalLinkIcon } from "@chakra-ui/icons"
 import NextLink from 'next/link'
-import { FaCameraRetro, FaExternalLinkAlt } from "react-icons/fa"
-import ButtonLink from "../ButtonLink"
+import { FaCameraRetro } from "react-icons/fa"
 
 const Profile = ({ padding, heading, text, jlpt, jlptButton, photoButton }) => {
     return (
-        <Box p={padding}>
+        <Box p={padding} overflow='scroll'>
             <Heading as="h2" pb="1rem">
                 {heading}
             </Heading>
-            <Text textAlign="left" fontSize={{ base: "md", lg: "sm" }} pb="1rem">
+            <Text textAlign="left" fontSize={{ base: "md", lg: "md" }} pb="1rem">
                 {text}
             </Text>
             <NextLink href="/photography" passHref scroll={false}>
