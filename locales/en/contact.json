@@ -3,5 +3,6 @@
     "status": "Currently accepting freelance opportunities. Open to web developer roles.",
     "name": "Name",
     "email": "Email",
-    "message": "Message"
+    "message": "Message",
+    "button": "Send"
 }

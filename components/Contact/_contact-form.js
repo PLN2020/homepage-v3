@@ -1,8 +1,8 @@
-import { Box, Divider, FormControl, FormLabel, Input, Text, Textarea, useColorModeValue, VStack } from "@chakra-ui/react"
+import { Box, Divider, FormControl, FormLabel, Input, Text, Textarea, useColorModeValue, VStack, Button } from "@chakra-ui/react"
 
-const ContactForm = ({ status, name, email, message }) => {
+const ContactForm = ({ status, name, email, message, button }) => {
     return (
-        <VStack align="left">
+        <VStack align="left" spacing="1rem">
             <Box>
                 <Text>{status}</Text>
             </Box>
@@ -40,6 +40,16 @@ const ContactForm = ({ status, name, email, message }) => {
                     maxH='15vh'
                 />
             </FormControl>
+            
+            <Box>
+                <Button
+                    borderRadius="none"
+                    borderColor={useColorModeValue('sumi', 'shironeri')}
+                    variant="outline"
+                >
+                    {button}
+                </Button>
+            </Box>
         </VStack>
     )
 }

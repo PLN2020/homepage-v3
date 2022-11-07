@@ -1,5 +1,5 @@
 import { EmailIcon } from "@chakra-ui/icons";
-import { Box } from "@chakra-ui/react"
+import { Box, Button, useColorModeValue } from "@chakra-ui/react"
 import ContactForm from "../components/Contact/_contact-form";
 import ContactMap from "../components/Contact/_contact-map";
 import PageHeading from "../components/PageHeading";
@@ -19,35 +19,24 @@ const Contact = () => {
             <Box 
                 w={{ sm: "100vw", lg: "50vw"}}
                 h="inherit"
+                p="3rem"
             >
-                <Box
-                    h="calc((100vh - 140px) / 3)"
-                    borderBottom="1px solid"
-                    display="flex"
-                    alignItems="center"
-                    justifyContent="center"
-                >
-                    <Section>
-                        <PageHeading 
-                            padding="3rem"
-                            title={t('contact:heading')}
-                            icon={EmailIcon}
-                            fontSize={{ base: "4xl", lg: "6xl", xl:"7xl" }}
-                            iconSize={{ base: "2rem", lg: "4rem", xl: "5rem" }} 
-                        />
-                    </Section>
-                </Box>
-
-                <Box p="3rem">
-                    <Section>
-                        <ContactForm 
-                            status={t('contact:status')}
-                            name={t('contact:name')}
-                            email={t('contact:email')}
-                            message={t('contact:message')}
-                        />
-                    </Section>
-                </Box>
+                <Section>
+                    <PageHeading 
+                        padding="0 0 1rem 0"
+                        title={t('contact:heading')}
+                        icon={EmailIcon}
+                        fontSize={{ base: "4xl", lg: "6xl", xl:"7xl" }}
+                        iconSize={{ base: "2rem", lg: "4rem", xl: "5rem" }} 
+                    />
+                    <ContactForm 
+                        status={t('contact:status')}
+                        name={t('contact:name')}
+                        email={t('contact:email')}
+                        message={t('contact:message')}
+                        button={t('contact:button')}
+                    />
+                </Section>
             </Box>
 
             <Box 
