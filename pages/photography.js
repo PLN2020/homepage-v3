@@ -31,17 +31,18 @@ const Photography = () => {
         >
             {/* Image Section */}
             <Box
-                h="inherit"
+                h="calc(100vh - 140px)"
                 w="calc(200vw / 3)"
-                bg={useColorModeValue('shironeri', 'sumi')}
+                // bg={useColorModeValue('shironeri', 'sumi')}
+                bg='tomato'
                 ref={ref}
                 overflow="hidden"
                 position="relative"
                 zIndex={2}
             >
                 <Carousel
-                    width="100%"
-                    height="100%"
+                    width="calc(200vw / 3)"
+                    height="calc(100vh - 140px)"
                     key={page}
                     custom={{direction, width}}
                     variants={variants}
@@ -112,11 +113,11 @@ const Photography = () => {
                 >
                     <Section>
                         <PageHeading 
-                            padding="3rem"
+                            padding="0rem"
                             title={t('photography:heading')}
                             icon={FaCameraRetro}
-                            fontSize={{ base: "xl", xl: "2rem"}}
-                            iconSize={{ base: "1rem", xl: "2rem"}}
+                            fontSize={{ base: "xl", xl: "3xl"}}
+                            iconSize={{ base: "1rem", xl: "1.5rem"}}
                         />
                     </Section>
                 </Box>
