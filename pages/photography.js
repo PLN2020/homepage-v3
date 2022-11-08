@@ -29,26 +29,6 @@ const Photography = () => {
             w="100%"
             display="flex"
         >
-            {/* Image Section */}
-            <Box
-                h="calc(100vh - 140px)"
-                w="calc(200vw / 3)"
-                bg={useColorModeValue('shironeri', 'sumi')}
-                ref={ref}
-                overflow="hidden"
-                position="relative"
-                zIndex={2}
-            >
-                <Carousel
-                    width="calc(200vw / 3)"
-                    height="calc(100vh - 140px)"
-                    key={page}
-                    custom={{direction, width}}
-                    variants={variants}
-                    bgImage={PhotoData[index].src}
-                />
-            </Box>
-
             {/* Right Side Menu */}
             <VStack
                 h="calc(100vh - 140px)"
@@ -123,6 +103,27 @@ const Photography = () => {
                     </Section>
                 </Box>
             </VStack>
+
+            {/* Image Section */}
+            <Box
+                h="calc(100vh - 140px)"
+                w="calc(200vw / 3)"
+                bg={useColorModeValue('shironeri', 'sumi')}
+                ref={ref}
+                overflow="hidden"
+                position="relative"
+                zIndex={2}
+                borderLeft="1px solid"
+            >
+                <Carousel
+                    width="calc(200vw / 3)"
+                    height="calc(100vh - 140px)"
+                    key={page}
+                    custom={{direction, width}}
+                    variants={variants}
+                    bgImage={PhotoData[index].src}
+                />
+            </Box>
         </Box>
         // <Grid
         //     as="section"
