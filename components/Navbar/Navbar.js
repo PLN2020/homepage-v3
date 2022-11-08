@@ -1,4 +1,4 @@
-import { Flex, useColorModeValue, Link, Box } from "@chakra-ui/react"
+import { Flex, Link, Box } from "@chakra-ui/react"
 import { FaFlickr, FaGithub, FaLinkedin } from 'react-icons/fa'
 import ThemeToggleButton from "./_theme-toggle-button"
 import LinkItem from "./_link-item"
@@ -30,11 +30,10 @@ const Navbar = () => {
             {/* Link Section */}
             <Flex
                 display={{ base: "none", lg: "flex"}}
-                p="3rem 2rem"
-                gap="1rem"
+                px="3rem"
                 borderLeft="1px solid"
-                align="center"
-                justify="center"
+                alignItems="center"
+                justifyContent="space-around"
                 boxSizing="border-box"
                 w="calc(100vw / 3)"
             >
