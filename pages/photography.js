@@ -97,8 +97,8 @@ const Photography = () => {
                             padding="0rem"
                             title={t('photography:heading')}
                             icon={FaCameraRetro}
-                            fontSize={{ base: "xl", xl: "3xl"}}
-                            iconSize={{ base: "1rem", xl: "1.5rem"}}
+                            fontSize={{ base: "xl", xl: "4xl"}}
+                            iconSize={{ base: "1rem", xl: "2rem"}}
                         />
                     </Section>
                 </Box>

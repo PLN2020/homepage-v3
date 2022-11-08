@@ -11,25 +11,14 @@ const PhotoDesc = ({ city, year, camera, number, width, padding }) => {
             display="flex"
             justifyContent="center"
         >
-            <Box 
-                h="6rem" 
-                w="6rem" 
-                border="1px solid" 
-                borderRadius="none"
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-            >
-                <Heading as="h2">{number}</Heading>
-            </Box>
-
-            <Box>
+            <Box textAlign="right">
                 <Heading as="h2">
                     {city}
                 </Heading>
                 <Box
                     display="flex"
                     alignItems="center"
+                    justifyContent="end"
                 >
                     <FaCamera />
                     <Text ml="5px">{camera}</Text>
@@ -42,6 +31,18 @@ const PhotoDesc = ({ city, year, camera, number, width, padding }) => {
                 >
                     {year}
                 </Badge>
+            </Box>
+
+            <Box 
+                h="6rem" 
+                w="6rem" 
+                border="1px solid" 
+                borderRadius="none"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+            >
+                <Heading as="h2">{number}</Heading>
             </Box>
         </HStack>
     )
