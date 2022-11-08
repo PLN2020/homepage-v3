@@ -90,13 +90,13 @@ const Photography = () => {
                     ref={ref}
                 >
                     <Carousel
-                        height="calc((100vh - 140px) / 3)"
-                        width="calc(100vw / 3)"
                         key={page}
                         custom={{direction, width}}
                         variants={variants}
                     >
                         <PhotoDesc 
+                            padding="3"
+                            width="calc(100vw / 3)"
                             city={t(`photography:${PhotoData[index].city}`)}
                             year={PhotoData[index].year}
                             camera={PhotoData[index].camera}

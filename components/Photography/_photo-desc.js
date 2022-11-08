@@ -1,13 +1,15 @@
 import { Badge, Box, Heading, HStack, StackDivider, Text, useColorModeValue } from "@chakra-ui/react"
 import { FaCamera } from "react-icons/fa"
 
-const PhotoDesc = ({ city, year, camera, number }) => {
+const PhotoDesc = ({ city, year, camera, number, width, padding }) => {
     return (
         <HStack 
             spacing="1rem" 
             divider={<StackDivider borderColor={useColorModeValue('fujimurasaki', 'shion')}/>}
-            // display="border-box"
-            p="3rem"
+            p={padding}
+            w={width}
+            display="flex"
+            justifyContent="center"
         >
             <Box 
                 h="6rem" 
