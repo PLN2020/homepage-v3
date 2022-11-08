@@ -54,26 +54,26 @@ const Photography = () => {
                 h="calc(100vh - 140px)"
                 w="calc(100vw / 3)"
                 spacing={0}
-                borderLeft="1px solid"
+                // borderLeft="1px solid"
             >
                 {/* Navigation */}
                 <Box
                     h="calc((100vh - 140px) / 3)"
                     w="calc(100vw / 3)"
                     display="flex"
-                    justifyContent="center"
+                    justifyContent="space-between"
                     borderBottom="1px solid"
                 >
                     <NavButton 
                         ariaLabel='Previous'
-                        width="calc((100vw / 6) - 2px)"
+                        width="calc(100vw / 6)"
                         height="calc((100vh - 140px) / 3)"
                         direction="previous"
                         onClick={() => paginate(-1)}
                     />
                     <NavButton
                         ariaLabel='Next'
-                        width="calc((100vw / 6) - 2px)"
+                        width="calc(100vw / 6)"
                         height="calc((100vh - 140px) / 3)"
                         direction="next"
                         onClick={() => paginate(1)}
