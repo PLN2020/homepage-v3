@@ -25,44 +25,68 @@ const Photography = () => {
     return (
         <Box 
             as="section"
-            h="calc(100vh - 140px)"
+            h={{ base: "auto", lg: "calc(100vh - 140px)"}}
             w="100%"
-            display="flex"
+            display={{ base: "", lg: "flex"}}
         >
+            {/* Mobile Layout */}
+            <Box
+                display={{ lg: "none" }}
+                h="calc(85vh - 100px)"
+                w="100%"
+                bg={useColorModeValue('shironeri', 'sumi')}
+                ref={ref}
+                overflow="hidden"
+                position="relative"
+                zIndex={2}
+                borderLeft={{ base: "none", lg: "1px solid"}}
+                borderBottom="1px solid"
+            >
+                <Carousel
+                    width="inherit"
+                    height="inherit"
+                    key={page}
+                    custom={{direction, width}}
+                    variants={variants}
+                    bgImage={PhotoData[index].src}
+                />
+            </Box>
+
             {/* Right Side Menu */}
             <VStack
-                h="calc(100vh - 140px)"
-                w="calc(100vw / 3)"
+                h={{ base: "auto", lg: "calc(100vh - 140px)"}}
+                w={{ base: "100vw", lg: "calc(100vw / 3)"}}
                 spacing={0}
                 // borderLeft="1px solid"
             >
                 {/* Navigation */}
                 <Box
-                    h="calc((100vh - 140px) / 3)"
-                    w="calc(100vw / 3)"
+                    h={{ base: "15vh", lg: "calc((100vh - 140px) / 3)"}}
+                    w={{base: "100vw", lg: "calc(100vw / 3)"}}
                     display="flex"
                     justifyContent="space-between"
                     borderBottom="1px solid"
                 >
                     <NavButton 
                         ariaLabel='Previous'
-                        width="calc(100vw / 6)"
-                        height="calc((100vh - 140px) / 3)"
+                        width={{ base: "50vw", lg: "calc(100vw / 6)" }}
+                        height={{ base: "15vh", lg: "calc((100vh - 140px) / 3)"}}
                         direction="previous"
                         onClick={() => paginate(-1)}
                     />
                     <NavButton
                         ariaLabel='Next'
-                        width="calc(100vw / 6)"
-                        height="calc((100vh - 140px) / 3)"
+                        width={{ base: "50vw", lg: "calc(100vw / 6)" }}
+                        height={{ base: "15vh", lg: "calc((100vh - 140px) / 3)"}}
                         direction="next"
                         onClick={() => paginate(1)}
                     />
                 </Box>
 
+                {/* Photo Description Section */}
                 <Box
-                    h="calc((100vh - 140px) / 3)"
-                    w="calc(100vw / 3)"
+                    h={{ base: "175px", md: "350px", lg: "calc((100vh - 140px) / 3)" }}
+                    w={{ base: "100vw", lg: "calc(100vw / 3)" }}
                     display="flex"
                     alignItems="center"
                     justifyContent="center"
@@ -76,7 +100,7 @@ const Photography = () => {
                     >
                         <PhotoDesc 
                             padding="3"
-                            width="calc(100vw / 3)"
+                            width="inherit"
                             city={t(`photography:${PhotoData[index].city}`)}
                             year={PhotoData[index].year}
                             camera={PhotoData[index].camera}
@@ -85,9 +109,10 @@ const Photography = () => {
                     </Carousel>
                 </Box>
 
+                {/* Heading Section */}
                 <Box
-                    h="calc((100vh - 140px) / 3)"
-                    w="calc(100vw / 3)"
+                    h={{ base: "175px", md: "350px", lg: "calc((100vh - 140px) / 3)" }}
+                    w={{ base: "100vw", lg: "calc(100vw / 3)" }}
                     display="flex"
                     alignItems="center"
                     justifyContent="center"
@@ -97,8 +122,8 @@ const Photography = () => {
                             padding="0rem"
                             title={t('photography:heading')}
                             icon={FaCameraRetro}
-                            fontSize={{ base: "xl", xl: "4xl"}}
-                            iconSize={{ base: "1rem", xl: "2rem"}}
+                            fontSize={{ base: "2xl", md: "4em", lg: "2xl", xl: "4xl"}}
+                            iconSize={{ base: "2rem", md: "4em", lg: "2em", xl: "2rem"}}
                         />
                     </Section>
                 </Box>
@@ -106,7 +131,8 @@ const Photography = () => {
 
             {/* Image Section */}
             <Box
-                h="calc(100vh - 140px)"
+                display={{ base: "none", lg: "flex"}}
+                h={{ lg: "calc(100vh - 140px)"}}
                 w="calc(200vw / 3)"
                 bg={useColorModeValue('shironeri', 'sumi')}
                 ref={ref}
