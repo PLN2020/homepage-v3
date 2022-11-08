@@ -61,19 +61,19 @@ const Photography = () => {
                     h="calc((100vh - 140px) / 3)"
                     w="calc(100vw / 3)"
                     display="flex"
-                    justifyContent="space-between"
+                    justifyContent="center"
                     borderBottom="1px solid"
                 >
                     <NavButton 
                         ariaLabel='Previous'
-                        width="calc(100vw / 6)"
+                        width="calc((100vw / 6) - 2px)"
                         height="calc((100vh - 140px) / 3)"
                         direction="previous"
                         onClick={() => paginate(-1)}
                     />
                     <NavButton
                         ariaLabel='Next'
-                        width="calc(100vw / 6)"
+                        width="calc((100vw / 6) - 2px)"
                         height="calc((100vh - 140px) / 3)"
                         direction="next"
                         onClick={() => paginate(1)}
