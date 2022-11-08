@@ -87,6 +87,7 @@ const Photography = () => {
                     alignItems="center"
                     justifyContent="center"
                     borderBottom="1px solid"
+                    ref={ref}
                 >
                     <Carousel
                         width="auto"
