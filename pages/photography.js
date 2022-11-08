@@ -26,15 +26,14 @@ const Photography = () => {
         <Box 
             as="section"
             h="calc(100vh - 140px)"
-            w="100vw"
+            w="100%"
             display="flex"
         >
             {/* Image Section */}
             <Box
                 h="calc(100vh - 140px)"
                 w="calc(200vw / 3)"
-                // bg={useColorModeValue('shironeri', 'sumi')}
-                bg='tomato'
+                bg={useColorModeValue('shironeri', 'sumi')}
                 ref={ref}
                 overflow="hidden"
                 position="relative"
@@ -60,8 +59,9 @@ const Photography = () => {
                 {/* Navigation */}
                 <Box
                     h="calc((100vh - 140px) / 3)"
-                    w="inherit"
+                    w="calc(100vw / 3)"
                     display="flex"
+                    justifyContent="space-between"
                     borderBottom="1px solid"
                 >
                     <NavButton 
@@ -82,7 +82,7 @@ const Photography = () => {
 
                 <Box
                     h="calc((100vh - 140px) / 3)"
-                    w="inherit"
+                    w="calc(100vw / 3)"
                     display="flex"
                     alignItems="center"
                     justifyContent="center"
@@ -90,8 +90,8 @@ const Photography = () => {
                     ref={ref}
                 >
                     <Carousel
-                        width="auto"
-                        height="auto"
+                        height="calc((100vh - 140px) / 3)"
+                        width="calc(100vw / 3)"
                         key={page}
                         custom={{direction, width}}
                         variants={variants}
@@ -107,7 +107,7 @@ const Photography = () => {
 
                 <Box
                     h="calc((100vh - 140px) / 3)"
-                    w="inherit"
+                    w="calc(100vw / 3)"
                     display="flex"
                     alignItems="center"
                     justifyContent="center"
@@ -240,7 +240,7 @@ const Photography = () => {
 let variants = {
     enter: ({direction, width}) => (
         {
-            x: direction > 0 ? -width : width,
+            x: direction > 0 ? width : -width,
             opacity: 0
         }
     ),
@@ -251,7 +251,7 @@ let variants = {
     exit: ({direction, width}) => (
         {
             zIndex: 0,
-            x: direction < 0 ? -width : width,
+            x: direction < 0 ? width : -width,
             opacity: 0
         }
     ),
