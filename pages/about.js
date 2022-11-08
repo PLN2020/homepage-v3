@@ -47,6 +47,8 @@ const About = () => {
                 borderLeft={{ base: "none", xl: "1px solid" }}
                 borderBottom={{ base: "1px solid", xl: "none" }}
                 // borderColor={useColorModeValue('fujimurasaki', 'shion')}
+                h={{ xl: "calc(100vh - 140px)" }}
+                overflow="auto"
             >
                 <Section>
                     <Toolkit 
@@ -66,6 +68,8 @@ const About = () => {
                 flexDirection="column"
                 borderBottom={{ base: "1px solid", xl: "none" }}
                 // borderColor={useColorModeValue('fujimurasaki', 'shion')}
+                h={{ xl: "calc((100vh - 140px) * 2/3)" }}
+                overflow="auto"
             >
                 <Section>
                     <Profile 
@@ -85,6 +89,8 @@ const About = () => {
                 colSpan={1}
                 borderLeft={{ base: "none", xl: "1px solid" }}
                 // borderColor={useColorModeValue('fujimurasaki', 'shion')}
+                h={{ xl: "calc((100vh - 140px) * 2/3)" }}
+                overflow="auto"
             >
                 <Section>
                     <Education 

@@ -28,7 +28,7 @@ const Profile = ({ padding, heading, text, jlpt, jlptButton, photoButton }) => {
                 <Divider borderColor={useColorModeValue('fujimurasaki', 'shion')} opacity={1}/>
             </Box>
             
-            <Text pb="1rem" fontSize={{ base: "md", lg: "sm" }}>
+            <Text pb="1rem" fontSize={{ base: "md", lg: "md" }}>
                 {jlpt}
             </Text>
             

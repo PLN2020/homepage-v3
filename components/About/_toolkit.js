@@ -21,14 +21,14 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
                 <TabPanels mt="1rem">
                     <TabPanel>
                         <VStack align='stretch' spacing={6}>
-                            {FrontEndData.map((skill) => {
+                            {FrontEndData.map((feSkill) => {
                                 return (
-                                    <Box key={skill}>
+                                    <Box key={feSkill}>
                                         <Flex alignItems="center" mb="2px">
-                                            {skill.icon}
-                                            <Text>&nbsp;{skill.name}</Text>
+                                            {feSkill.icon}
+                                            <Text>&nbsp;{feSkill.name}</Text>
                                         </Flex>
-                                        <Progress hasStripe value={skill.level} size="xs" colorScheme="purple" />
+                                        <Progress hasStripe value={feSkill.level} size="xs" colorScheme="purple" />
                                     </Box>
                                 )
                             })}
@@ -37,14 +37,14 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
                     
                     <TabPanel>
                         <VStack align='stretch' spacing={6}>
-                            {BackEndData.map((skill) => {
+                            {BackEndData.map((beSkill) => {
                                 return (
-                                    <Box key={skill}>
+                                    <Box key={beSkill}>
                                         <Flex alignItems="center" mb="2px">
-                                            {skill.icon}
-                                            <Text>&nbsp;{skill.name}</Text>
+                                            {beSkill.icon}
+                                            <Text>&nbsp;{beSkill.name}</Text>
                                         </Flex>
-                                        <Progress hasStripe value={skill.level} size="xs" colorScheme="purple" />
+                                        <Progress hasStripe value={beSkill.level} size="xs" colorScheme="purple" />
                                     </Box>
                                 )
                             })}
@@ -53,14 +53,14 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
 
                     <TabPanel>
                         <VStack align='stretch' spacing={6}>
-                            {WorkflowData.map((skill) => {
+                            {WorkflowData.map((wfSkill) => {
                                 return (
-                                    <Box key={skill}>
+                                    <Box key={wfSkill}>
                                         <Flex alignItems="center" mb="2px">
-                                            {skill.icon}
-                                            <Text>&nbsp;{skill.name}</Text>
+                                            {wfSkill.icon}
+                                            <Text>&nbsp;{wfSkill.name}</Text>
                                         </Flex>
-                                        <Progress hasStripe value={skill.level} size="xs" colorScheme="purple" />
+                                        <Progress hasStripe value={wfSkill.level} size="xs" colorScheme="purple" />
                                     </Box>
                                 )
                             })}

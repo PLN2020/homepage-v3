@@ -21,7 +21,7 @@ const Navbar = () => {
             <Flex 
                 padding="3rem 2rem"
                 align="center"
-                w={{ base: "50%", lg: "calc(100vw / 3)" }}
+                w={{ base: "50%", xl: "calc(100vw / 3)" }}
                 boxSizing="border-box"
             >
                 <Logo />
@@ -29,7 +29,7 @@ const Navbar = () => {
 
             {/* Link Section */}
             <Flex
-                display={{ base: "none", lg: "flex"}}
+                display={{ base: "none", xl: "flex"}}
                 px="3rem"
                 borderLeft="1px solid"
                 alignItems="center"
@@ -53,7 +53,7 @@ const Navbar = () => {
 
             {/* Social Section */}
             <Flex
-                display={{ base: "none", lg: "flex"}}
+                display={{ base: "none", xl: "flex"}}
                 p="3rem 2rem"
                 gap="1.5rem"
                 borderLeft="1px solid"
@@ -98,16 +98,16 @@ const Navbar = () => {
             {/* Buttons Sections */}
             <Flex
                 p="3rem 2rem"
-                gap={{ base: "0.5rem", lg: "1rem"}}
+                gap={{ base: "0.5rem", xl: "1rem"}}
                 borderLeft={{ base: "none", md: "1px solid" }}
                 align="center"
                 justify="center"
                 boxSizing="border-box"
-                w={{ base: "50%", lg: "calc(100vw / 6)" }}
+                w={{ base: "50%", xl: "calc(100vw / 6)" }}
             >
                 <Box zIndex={5}><ToggleLocaleButton /></Box>
                 <ThemeToggleButton />
-                <Box display={{ base: 'inline-block', lg: 'none' }} zIndex={5}>
+                <Box display={{ base: 'inline-block', xl: 'none' }} zIndex={5}>
                     <MobileMenu />
                 </Box>
             </Flex>

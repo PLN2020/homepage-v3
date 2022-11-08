@@ -1,38 +1,52 @@
 import { Box, Heading, VStack, StackDivider, Text, useColorModeValue } from "@chakra-ui/react"
 
-const Education = ({ padding, heading, edOneHead, edOneDesc, edTwoHead, edTwoDesc, edThreeHead, edThreeDesc, jlpt,jlptButton }) => {
+const Education = ({ padding, heading, edOneHead, edOneDesc, edTwoHead, edTwoDesc, edThreeHead, edThreeDesc }) => {
+
+    const EduHead = ({ children, ...props }) => {
+        return (
+            <Heading
+                as="h3" 
+                fontSize='xl' 
+                textDecoration="underline"
+                textDecorationColor={useColorModeValue('fujimurasaki', 'shion')}
+                textDecorationThickness={2}
+                textUnderlineOffset={6}
+                mb={2}
+                {...props}
+            >
+                {children}    
+            </Heading>
+        )
+    }
+
     return (
         <Box p={padding}>
             <Heading as="h2" pb="1rem">
                 {heading}
             </Heading>
+
             <VStack
-                divider={<StackDivider borderColor={useColorModeValue('fujimurasaki', 'shion')} />}
-                spacing={5}
+                // divider={<StackDivider borderColor={useColorModeValue('fujimurasaki', 'shion')} />}
+                spacing={6}
                 align='stretch'
             >
                 <Box>
-                    <Heading as="h3" fontSize={{ base: "lg", lg: "lg" }} pb="4px">
-                        {edOneHead}
-                    </Heading>
-                    <Text fontSize={{ base: "md", lg: "sm" }}>
-                        {edOneDesc}
+                    <EduHead>{edOneHead}</EduHead>
+                    <Text fontSize='md'>
+                        &emsp;{edOneDesc}
+                    </Text>
+                </Box>
+
+                <Box>
+                    <EduHead>{edTwoHead}</EduHead>
+                    <Text fontSize='md'>
+                        &emsp;{edTwoDesc}
                     </Text>
                 </Box>
                 <Box>
-                    <Heading as="h3" fontSize={{ base: "lg", lg: "lg" }} pb="4px">
-                        {edTwoHead}
-                    </Heading>
-                    <Text fontSize={{ base: "md", lg: "sm" }}>
-                        {edTwoDesc}
-                    </Text>
-                </Box>
-                <Box>
-                    <Heading as="h3" fontSize={{ base: "lg", lg: "lg" }} pb="4px">
-                        {edThreeHead}
-                    </Heading>
-                    <Text fontSize={{ base: "md", lg: "sm" }}>
-                        {edThreeDesc}
+                    <EduHead>{edThreeHead}</EduHead>
+                    <Text>
+                        &emsp;{edThreeDesc}
                     </Text>
                 </Box>
             </VStack>
