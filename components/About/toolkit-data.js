@@ -1,6 +1,6 @@
 import { DiRuby } from "react-icons/di"
 import { FaBootstrap, FaConfluence, FaCss3, FaFigma, FaGithub, FaHtml5, FaJira, FaJs, FaReact, FaSlack, FaTrello } from "react-icons/fa"
-import { SiChakraui, SiFirebase, SiHeroku, SiMiro, SiNextdotjs, SiPostgresql, SiRubyonrails, SiTailwindcss, SiYarn } from "react-icons/si"
+import { SiChakraui, SiFirebase, SiHeroku, SiMiro, SiNextdotjs, SiPostgresql, SiRubyonrails, SiTailwindcss, SiVercel, SiYarn } from "react-icons/si"
 import { Icon } from '@chakra-ui/react'
 
 export const FrontEndData = [
@@ -76,6 +76,11 @@ export const BackEndData = [
         name: "Yarn",
         icon: <Icon as={SiYarn} />,
         level: "40"
+    },
+    {
+        name: "Vercel",
+        icon: <Icon as={SiVercel} />,
+        level: "55"
     }
 ]
 
