@@ -30,7 +30,7 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree, description }) =>
                             {FrontEndData.map((feSkill) => {
                                 return (
                                     <Box key={feSkill}>
-                                        <Flex alignItems="center" mb="2px">
+                                        <Flex alignItems="center" mb="2px" fontSize={{ base: "md", xl: "xl" }}>
                                             {feSkill.icon}
                                             <Text>&nbsp;{feSkill.name}</Text>
                                         </Flex>
@@ -46,7 +46,7 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree, description }) =>
                             {BackEndData.map((beSkill) => {
                                 return (
                                     <Box key={beSkill}>
-                                        <Flex alignItems="center" mb="2px">
+                                        <Flex alignItems="center" mb="2px" fontSize={{ base: "md", xl: "xl" }}>
                                             {beSkill.icon}
                                             <Text>&nbsp;{beSkill.name}</Text>
                                         </Flex>
@@ -62,7 +62,7 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree, description }) =>
                             {WorkflowData.map((wfSkill) => {
                                 return (
                                     <Box key={wfSkill}>
-                                        <Flex alignItems="center" mb="2px">
+                                        <Flex alignItems="center" mb="2px" fontSize={{ base: "md", xl: "xl" }}>
                                             {wfSkill.icon}
                                             <Text>&nbsp;{wfSkill.name}</Text>
                                         </Flex>

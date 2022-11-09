@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Button, Link, useColorModeValue, Divider, HStack } from "@chakra-ui/react"
+import { Box, Heading, Text, Button, Link, useColorModeValue, Divider, HStack, VStack } from "@chakra-ui/react"
 import { ExternalLinkIcon } from "@chakra-ui/icons"
 import NextLink from 'next/link'
 import { FaCameraRetro, FaDatabase } from "react-icons/fa"
@@ -13,7 +13,7 @@ const Profile = ({ padding, heading, text, jlpt, jlptButton, photoButton, projec
                 {text}
             </Text>
 
-            <HStack gap={2}>
+            <VStack gap={2} align="start">
                 <NextLink href="/photography" passHref scroll={false}>
                     <Button 
                         borderRadius={0} 
@@ -37,7 +37,7 @@ const Profile = ({ padding, heading, text, jlpt, jlptButton, photoButton, projec
                         {projectsButton}
                     </Button>
                 </NextLink>
-            </HStack>
+            </VStack>
 
             <Box pt="1.5rem" pb="1.5rem">
                 <Divider borderColor={useColorModeValue('fujimurasaki', 'shion')} opacity={1}/>
