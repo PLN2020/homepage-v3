@@ -12,8 +12,10 @@
     "jlpt": "日本語能力試験レベルN2を２０１７年に取得。",
     "jlpt-button": "日本能力試験について",
     "photo-button": "写真へ",
+    "projects-button": "プロジェクトへ",
     "toolkit-head": "技能",
     "toolkit-tab-one": "フロントエンド",
     "toolkit-tab-two": "バックエンド",
-    "toolkit-tab-three": "ワークフロー"
+    "toolkit-tab-three": "ワークフロー",
+    "toolkit-desc": "以下の技術やツールの使用経験があります。"
 }

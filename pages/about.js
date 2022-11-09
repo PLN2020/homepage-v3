@@ -57,6 +57,7 @@ const About = () => {
                         tabOne={t('about:toolkit-tab-one')}
                         tabTwo={t('about:toolkit-tab-two')}
                         tabThree={t('about:toolkit-tab-three')}
+                        description={t('about:toolkit-desc')}
                     />
                 </Section>
             </GridItem>
@@ -79,6 +80,7 @@ const About = () => {
                         jlpt={t('about:jlpt')}
                         jlptButton={t('about:jlpt-button')}
                         photoButton={t('about:photo-button')}
+                        projectsButton={t('about:projects-button')}
                     />
                 </Section>
             </GridItem>

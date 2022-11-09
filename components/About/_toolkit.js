@@ -1,7 +1,7 @@
 import { Box, Heading, Tabs, TabList, Tab, TabPanels, TabPanel, VStack, Progress, Text, Flex } from "@chakra-ui/react"
 import { FrontEndData, BackEndData, WorkflowData } from "./toolkit-data"
 
-const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
+const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree, description }) => {
     return (
         <Box 
             p={padding} 
@@ -10,6 +10,12 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
             <Heading as="h2" pb="1rem">
                 {heading}
             </Heading>
+
+            <Box>
+                <Text fontSize="sm">
+                    {description}
+                </Text>
+            </Box>
 
             <Tabs isFitted colorScheme="purple">
                 <TabList>
@@ -20,7 +26,7 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
 
                 <TabPanels mt="1rem">
                     <TabPanel>
-                        <VStack align='stretch' spacing={6}>
+                        <VStack align='stretch' spacing={4}>
                             {FrontEndData.map((feSkill) => {
                                 return (
                                     <Box key={feSkill}>
@@ -28,7 +34,7 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
                                             {feSkill.icon}
                                             <Text>&nbsp;{feSkill.name}</Text>
                                         </Flex>
-                                        <Progress hasStripe value={feSkill.level} size="xs" colorScheme="purple" />
+                                        {/* <Progress hasStripe value={feSkill.level} size="xs" colorScheme="purple" /> */}
                                     </Box>
                                 )
                             })}
@@ -36,7 +42,7 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
                     </TabPanel>
                     
                     <TabPanel>
-                        <VStack align='stretch' spacing={6}>
+                        <VStack align='stretch' spacing={4}>
                             {BackEndData.map((beSkill) => {
                                 return (
                                     <Box key={beSkill}>
@@ -44,7 +50,7 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
                                             {beSkill.icon}
                                             <Text>&nbsp;{beSkill.name}</Text>
                                         </Flex>
-                                        <Progress hasStripe value={beSkill.level} size="xs" colorScheme="purple" />
+                                        {/* <Progress hasStripe value={beSkill.level} size="xs" colorScheme="purple" /> */}
                                     </Box>
                                 )
                             })}
@@ -52,7 +58,7 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
                     </TabPanel>
 
                     <TabPanel>
-                        <VStack align='stretch' spacing={6}>
+                        <VStack align='stretch' spacing={4}>
                             {WorkflowData.map((wfSkill) => {
                                 return (
                                     <Box key={wfSkill}>
@@ -60,7 +66,7 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree }) => {
                                             {wfSkill.icon}
                                             <Text>&nbsp;{wfSkill.name}</Text>
                                         </Flex>
-                                        <Progress hasStripe value={wfSkill.level} size="xs" colorScheme="purple" />
+                                        {/* <Progress hasStripe value={wfSkill.level} size="xs" colorScheme="purple" /> */}
                                     </Box>
                                 )
                             })}

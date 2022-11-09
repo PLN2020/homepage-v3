@@ -12,8 +12,10 @@
     "jlpt": "Certificat JLPT N2 acquérit en 2017.",
     "jlpt-button": "À propos du JLPT",
     "photo-button": "Voir mes photos",
+    "projects-button": "Voir mes projets",
     "toolkit-head": "Compétences",
     "toolkit-tab-one": "Front-end",
     "toolkit-tab-two": "Back-end",
-    "toolkit-tab-three": "Workflow"
+    "toolkit-tab-three": "Workflow",
+    "toolkit-desc": "J'ai de l'expérience avec les technologies et outils suivants."
 }
