@@ -8,13 +8,11 @@ const ButtonLink = ({ icon, href, text }) => {
                 rightIcon={icon}
                 border="1px solid"
                 borderColor={useColorModeValue('sumi', 'shironeri')}
+                as={Link}
+                href={href}
+                target="_blank"
             >
-                <Link
-                    href={href}
-                    target="_blank"
-                >
-                    {text}
-                </Link>
+                {text}
             </Button>
     )
 }

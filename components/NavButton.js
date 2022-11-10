@@ -30,7 +30,9 @@ const NavButton = ({ ariaLabel, width, height, direction, onClick }) => {
                 aria-label={ariaLabel}
                 border="none"
                 borderRadius={0}
-                w={width}
+                // w={width}
+                display="block"
+                w="100%"
                 h={height}
                 fontSize="6xl"
                 onClick={onClick}

@@ -62,25 +62,30 @@ const Photography = () => {
                 {/* Navigation */}
                 <Box
                     h={{ base: "15vh", lg: "calc((100vh - 140px) / 3)"}}
-                    w={{base: "100vw", lg: "calc(100vw / 3)"}}
+                    w={{ base: "100%", lg: "calc(100%)" }}
                     display="flex"
                     justifyContent="space-between"
                     borderBottom="1px solid"
                 >
-                    <NavButton 
-                        ariaLabel='Previous'
-                        width={{ base: "50vw", lg: "calc(100vw / 6)" }}
-                        height={{ base: "15vh", lg: "calc((100vh - 140px) / 3)"}}
-                        direction="previous"
-                        onClick={() => paginate(-1)}
-                    />
-                    <NavButton
-                        ariaLabel='Next'
-                        width={{ base: "50vw", lg: "calc(100vw / 6)" }}
-                        height={{ base: "15vh", lg: "calc((100vh - 140px) / 3)"}}
-                        direction="next"
-                        onClick={() => paginate(1)}
-                    />
+                    <Box w="50%">
+                        <NavButton 
+                            ariaLabel='Previous'
+                            // width={{ base: "50%", lg: "calc(100%)" }}
+                            height={{ base: "15vh", lg: "calc((100vh - 140px) / 3)"}}
+                            direction="previous"
+                            onClick={() => paginate(-1)}
+                        />
+                    </Box>
+
+                    <Box w="50%">
+                        <NavButton
+                            ariaLabel='Next'
+                            // width={{ base: "50%", lg: "calc(100% / 6)" }}
+                            height={{ base: "15vh", lg: "calc((100vh - 140px) / 3)"}}
+                            direction="next"
+                            onClick={() => paginate(1)}
+                        />
+                    </Box>
                 </Box>
 
                 {/* Photo Description Section */}
