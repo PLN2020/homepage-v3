@@ -1,4 +1,4 @@
-import { Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
+import { Box, Grid, GridItem, useColorModeValue } from "@chakra-ui/react";
 import Section from "../components/Section";
 import PageHeading from "../components/PageHeading";
 import useTranslation from "next-translate/useTranslation";
@@ -90,20 +90,24 @@ const Projects = () => {
                 justifyContent="space-around"
                 borderBottom={{ base: "1px solid", lg: "none" }}
             >
-                <NavButton
-                    ariaLabel='Previous'
-                    width={{ base: "50vw", lg: "calc(100vw / 6)" }}
-                    height={{ base: "calc(100vh/6)", md: "25vh", lg: "calc((100vh - 140px) / 3)"}}
-                    direction="previous"
-                    onClick={() => paginate(-1)}
-                />
-                <NavButton
-                    ariaLabel='Next'
-                    width={{ base: "50vw", lg: "calc(100vw / 6)" }}
-                    height={{ base: "calc(100vh/6)", md: "25vh", lg: "calc((100vh - 140px) / 3)"}}
-                    direction="next"
-                    onClick={() => paginate(1)}
-                />
+                <Box w="50%">
+                    <NavButton
+                        ariaLabel='Previous'
+                        width={{ base: "50vw", lg: "calc(100vw / 6)" }}
+                        height={{ base: "calc(100vh/6)", md: "25vh", lg: "calc((100vh - 140px) / 3)"}}
+                        direction="previous"
+                        onClick={() => paginate(-1)}
+                    />
+                </Box>
+                <Box w="50%">
+                    <NavButton
+                        ariaLabel='Next'
+                        width={{ base: "50vw", lg: "calc(100vw / 6)" }}
+                        height={{ base: "calc(100vh/6)", md: "25vh", lg: "calc((100vh - 140px) / 3)"}}
+                        direction="next"
+                        onClick={() => paginate(1)}
+                    />
+                </Box>
             </GridItem>
 
             {/* Page Heading Section */}
