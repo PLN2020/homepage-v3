@@ -1,6 +1,7 @@
 {
     "locales": ["en", "fr", "ja"],
-    "defaultLocale": "en",
+    "defaultLocale": "default",
+    "localeDetection": true,
     "pages": {
         "*": ["common"],
         "/": ["index"],
