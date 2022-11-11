@@ -1,4 +1,4 @@
-import { Box, Heading, Tabs, TabList, Tab, TabPanels, TabPanel, VStack, Progress, Text, Flex } from "@chakra-ui/react"
+import { Box, Heading, Tabs, TabList, Tab, TabPanels, TabPanel, VStack, Text, Flex } from "@chakra-ui/react"
 import { FrontEndData, BackEndData, WorkflowData } from "./toolkit-data"
 
 const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree, description }) => {
@@ -30,11 +30,10 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree, description }) =>
                             {FrontEndData.map((feSkill) => {
                                 return (
                                     <Box key={feSkill}>
-                                        <Flex alignItems="center" mb="2px" fontSize={{ base: "md", xl: "xl" }}>
+                                        <Flex alignItems="center" mb="2px" fontSize="md">
                                             {feSkill.icon}
                                             <Text>&nbsp;{feSkill.name}</Text>
                                         </Flex>
-                                        {/* <Progress hasStripe value={feSkill.level} size="xs" colorScheme="purple" /> */}
                                     </Box>
                                 )
                             })}
@@ -46,11 +45,10 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree, description }) =>
                             {BackEndData.map((beSkill) => {
                                 return (
                                     <Box key={beSkill}>
-                                        <Flex alignItems="center" mb="2px" fontSize={{ base: "md", xl: "xl" }}>
+                                        <Flex alignItems="center" mb="2px" fontSize="md">
                                             {beSkill.icon}
                                             <Text>&nbsp;{beSkill.name}</Text>
                                         </Flex>
-                                        {/* <Progress hasStripe value={beSkill.level} size="xs" colorScheme="purple" /> */}
                                     </Box>
                                 )
                             })}
@@ -62,11 +60,10 @@ const Toolkit = ({ padding, heading, tabOne, tabTwo, tabThree, description }) =>
                             {WorkflowData.map((wfSkill) => {
                                 return (
                                     <Box key={wfSkill}>
-                                        <Flex alignItems="center" mb="2px" fontSize={{ base: "md", xl: "xl" }}>
+                                        <Flex alignItems="center" mb="2px" fontSize="md">
                                             {wfSkill.icon}
                                             <Text>&nbsp;{wfSkill.name}</Text>
                                         </Flex>
-                                        {/* <Progress hasStripe value={wfSkill.level} size="xs" colorScheme="purple" /> */}
                                     </Box>
                                 )
                             })}

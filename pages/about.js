@@ -13,7 +13,7 @@ const About = () => {
     return (
         <Grid
             as="section"
-            h={{ base: "auto", xl: "calc(100vh - 140px)" }}
+            h={{ base: "auto", xl: "calc(100% - 140px)" }}
             w="100%"
             templateRows={{ base: "100%, 100%, 100%, 100%", xl: "repeat(3, 1fr)" }}
             templateColumns={{ base: '1fr', xl: 'repeat(3, 1fr)' }}
@@ -27,7 +27,6 @@ const About = () => {
                 justifyContent="center"
                 alignItems="center"
                 borderBottom="1px solid"
-                // borderColor={useColorModeValue('fujimurasaki', 'shion')}
             >
                 <Section>
                     <PageHeading 
@@ -46,7 +45,6 @@ const About = () => {
                 colSpan={1} 
                 borderLeft={{ base: "none", xl: "1px solid" }}
                 borderBottom={{ base: "1px solid", xl: "none" }}
-                // borderColor={useColorModeValue('fujimurasaki', 'shion')}
                 h={{ xl: "calc(100vh - 140px)" }}
                 overflow="auto"
             >
@@ -68,7 +66,6 @@ const About = () => {
                 colSpan={1} 
                 flexDirection="column"
                 borderBottom={{ base: "1px solid", xl: "none" }}
-                // borderColor={useColorModeValue('fujimurasaki', 'shion')}
                 h={{ xl: "calc((100vh - 140px) * 2/3)" }}
                 overflow="auto"
             >
@@ -90,7 +87,6 @@ const About = () => {
                 rowSpan={2}
                 colSpan={1}
                 borderLeft={{ base: "none", xl: "1px solid" }}
-                // borderColor={useColorModeValue('fujimurasaki', 'shion')}
                 h={{ xl: "calc((100vh - 140px) * 2/3)" }}
                 overflow="auto"
             >

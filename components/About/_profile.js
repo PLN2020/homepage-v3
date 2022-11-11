@@ -2,6 +2,7 @@ import { Box, Heading, Text, Button, Link, useColorModeValue, Divider, HStack, V
 import { ExternalLinkIcon } from "@chakra-ui/icons"
 import NextLink from 'next/link'
 import { FaCameraRetro, FaDatabase } from "react-icons/fa"
+import ButtonLink from "../ButtonLink"
 
 const Profile = ({ padding, heading, text, jlpt, jlptButton, photoButton, projectsButton }) => {
     return (
@@ -47,20 +48,11 @@ const Profile = ({ padding, heading, text, jlpt, jlptButton, photoButton, projec
                 {jlpt}
             </Text>
             
-            <Button 
-                variant="outline" 
-                borderRadius={0} 
-                rightIcon={<ExternalLinkIcon />}
-                border="1px solid"
-                borderColor={useColorModeValue('sumi', 'shironeri')}
-            >
-                <Link
-                    href="https://www.jlpt.jp/e/about/levelsummary.html" 
-                    target="_blank"
-                >
-                    {jlptButton}
-                </Link>
-            </Button>
+            <ButtonLink 
+                icon={<ExternalLinkIcon />}
+                href="https://www.jlpt.jp/e/about/levelsummary.html"
+                text={jlptButton}
+            />
         </Box>
     )
 }
