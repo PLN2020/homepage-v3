@@ -103,7 +103,7 @@ const Photography = () => {
                     >
                         <PhotoDesc 
                             padding="3"
-                            width="inherit"
+                            // width="inherit"
                             city={t(`photography:${PhotoData[index].city}`)}
                             year={PhotoData[index].year}
                             camera={PhotoData[index].camera}
