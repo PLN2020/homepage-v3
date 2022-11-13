@@ -1,7 +1,7 @@
 import { Button } from "@chakra-ui/react"
 import ChakraBox from "./ChakraBox"
 
-const NavButton = ({ ariaLabel, width, height, direction, onClick }) => {
+const NavButton = ({ ariaLabel, height, direction, onClick }) => {
     const arrow = 
     direction === "next"
     ? "→"
@@ -30,7 +30,6 @@ const NavButton = ({ ariaLabel, width, height, direction, onClick }) => {
                 aria-label={ariaLabel}
                 border="none"
                 borderRadius={0}
-                // w={width}
                 display="block"
                 w="100%"
                 h={height}

@@ -25,26 +25,26 @@ const Photography = () => {
     return (
         <Box 
             as="section"
-            h={{ base: "auto", lg: "calc(100vh - 140px)"}}
+            h={{ base: "auto", lg: "calc(100% - 140px)" }}
             w="100%"
             display={{ base: "", lg: "flex"}}
         >
             {/* Mobile Layout */}
             <Box
-                display={{ lg: "none" }}
-                h="calc(85vh - 100px)"
-                w="100%"
+                // display={{ lg: "none" }}
+                h={{ base: "calc(85vh - 100px)", lg: "calc(100vh - 140px)" }}
+                w={{ base: "100%", lg: "calc(200% / 3)"}}
                 bg={useColorModeValue('shironeri', 'sumi')}
                 ref={ref}
                 overflow="hidden"
                 position="relative"
                 zIndex={2}
-                borderLeft={{ base: "none", lg: "1px solid"}}
-                borderBottom="1px solid"
+                // borderLeft={{ base: "none", lg: "1px solid"}}
+                borderBottom={{ base: "1px solid", lg: "none" }}
             >
                 <Carousel
-                    width="inherit"
-                    height="inherit"
+                    width="100%"
+                    height="100%"
                     key={page}
                     custom={{direction, width}}
                     variants={variants}
@@ -55,14 +55,14 @@ const Photography = () => {
             {/* Right Side Menu */}
             <VStack
                 h={{ base: "auto", lg: "calc(100vh - 140px)"}}
-                w={{ base: "100vw", lg: "calc(100vw / 3)"}}
+                w={{ base: "100%", lg: "calc(100% / 3)"}}
                 spacing={0}
-                // borderLeft="1px solid"
+                borderLeft={{ lg: "1px solid"}}
             >
                 {/* Navigation */}
                 <Box
-                    h={{ base: "15vh", lg: "calc((100vh - 140px) / 3)"}}
-                    w={{ base: "100%", lg: "calc(100%)" }}
+                    h={{ base: "15vh", lg: "calc(100% / 3)"}}
+                    w="100%"
                     display="flex"
                     justifyContent="space-between"
                     borderBottom="1px solid"
@@ -70,8 +70,7 @@ const Photography = () => {
                     <Box w="50%">
                         <NavButton 
                             ariaLabel='Previous'
-                            // width={{ base: "50%", lg: "calc(100%)" }}
-                            height={{ base: "15vh", lg: "calc((100vh - 140px) / 3)"}}
+                            height={{ base: "15vh", lg: "calc((100vh - 140px) / 3)" }}
                             direction="previous"
                             onClick={() => paginate(-1)}
                         />
@@ -80,8 +79,7 @@ const Photography = () => {
                     <Box w="50%">
                         <NavButton
                             ariaLabel='Next'
-                            // width={{ base: "50%", lg: "calc(100% / 6)" }}
-                            height={{ base: "15vh", lg: "calc((100vh - 140px) / 3)"}}
+                            height={{ base: "15vh", lg: "calc((100vh - 140px) / 3)" }}
                             direction="next"
                             onClick={() => paginate(1)}
                         />
@@ -90,8 +88,8 @@ const Photography = () => {
 
                 {/* Photo Description Section */}
                 <Box
-                    h={{ base: "175px", md: "350px", lg: "calc((100vh - 140px) / 3)" }}
-                    w={{ base: "100vw", lg: "calc(100vw / 3)" }}
+                    h={{ base: "175px", md: "350px", lg: "calc(100% / 3)" }}
+                    w="100%"
                     display="flex"
                     alignItems="center"
                     justifyContent="center"
@@ -116,8 +114,8 @@ const Photography = () => {
 
                 {/* Heading Section */}
                 <Box
-                    h={{ base: "175px", md: "350px", lg: "calc((100vh - 140px) / 3)" }}
-                    w={{ base: "100vw", lg: "calc(100vw / 3)" }}
+                    h={{ base: "175px", md: "350px", lg: "calc(100% / 3)" }}
+                    w="100%"
                     display="flex"
                     alignItems="center"
                     justifyContent="center"
@@ -135,7 +133,7 @@ const Photography = () => {
             </VStack>
 
             {/* Image Section */}
-            <Box
+            {/* <Box
                 display={{ base: "none", lg: "flex"}}
                 h={{ lg: "calc(100vh - 140px)"}}
                 w="calc(200vw / 3)"
@@ -154,7 +152,7 @@ const Photography = () => {
                     variants={variants}
                     bgImage={PhotoData[index].src}
                 />
-            </Box>
+            </Box> */}
         </Box>
     )
 }
