@@ -14,7 +14,7 @@ const Carousel = ({ width, height, key, custom, variants, bgImage, children }) =
                 custom={custom}
                 transition={{ duration: 0.4 }}
                 display='flex'
-                position="absolute"
+                // position="absolute"
                 h={height}
                 w={width}
                 alignItems='center' 

@@ -1,11 +1,12 @@
 import { Box, Heading, Icon, useColorModeValue } from "@chakra-ui/react"
 
-const PageHeading = ({ padding, title, icon, fontSize, iconSize }) => {
+const PageHeading = ({ padding, title, icon, fontSize, iconSize, ...props }) => {
     return (
         <Box 
             p={padding} 
             display="flex" 
             alignItems="center"
+            {...props}
         >
             <Heading 
                 as="h1" 

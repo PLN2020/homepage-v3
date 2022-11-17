@@ -28,41 +28,41 @@ export const ProjectsData = [
         firstLinkIcon: <FaGithub />,
         firstLink: "https://github.com/PLN2020/homepage-v3",
         firstLinkText: "homepage-v3-first-link-text",
-        secondLinkIcon: <FaHome />,
+        secondLinkIcon: <ExternalLinkIcon />,
         secondLink: "https://www.plnguyen.dev/",
         secondLinkText: "homepage-v3-second-link-text",
-        img: "https://res.cloudinary.com/ditoikfqn/image/upload/v1667780360/NextJS-Portfolio/homepage-v3_ju7vrn.jpg",
+        img: "https://res.cloudinary.com/ditoikfqn/image/upload/v1667971166/NextJS-Portfolio/og_image_v2_ohj71l.jpg",
     },
-    {
-        projectTitle: "Homepage v2",
-        projectYear: "2022", 
-        projectDesc: "homepage-v2-description", 
-        projectStack: [
-            {
-                label: "Next JS",
-                icon: <SiNextdotjs />,
-            },
-            {
-                label: "Chakra UI",
-                icon: <SiChakraui />,
-            },
-            {
-                label: "React",
-                icon: <FaReact />,
-            },
-            {
-                label: "Vercel",
-                icon: <SiVercel />,
-            },
-        ],
-        firstLinkIcon: <FaGithub />,
-        firstLink: "https://github.com/PLN2020/nextjs-chakraui-hp",
-        firstLinkText: "homepage-v2-first-link-text",
-        secondLinkIcon: <ExternalLinkIcon />,
-        secondLink: "https://nextjs-chakraui-hp.vercel.app/",
-        secondLinkText: "homepage-v2-second-link-text",
-        img: "https://res.cloudinary.com/ditoikfqn/image/upload/v1667780799/NextJS-Portfolio/homepage-v2_ixoni4.png",
-    },
+    // {
+    //     projectTitle: "Homepage v2",
+    //     projectYear: "2022", 
+    //     projectDesc: "homepage-v2-description", 
+    //     projectStack: [
+    //         {
+    //             label: "Next JS",
+    //             icon: <SiNextdotjs />,
+    //         },
+    //         {
+    //             label: "Chakra UI",
+    //             icon: <SiChakraui />,
+    //         },
+    //         {
+    //             label: "React",
+    //             icon: <FaReact />,
+    //         },
+    //         {
+    //             label: "Vercel",
+    //             icon: <SiVercel />,
+    //         },
+    //     ],
+    //     firstLinkIcon: <FaGithub />,
+    //     firstLink: "https://github.com/PLN2020/nextjs-chakraui-hp",
+    //     firstLinkText: "homepage-v2-first-link-text",
+    //     secondLinkIcon: <ExternalLinkIcon />,
+    //     secondLink: "https://nextjs-chakraui-hp.vercel.app/",
+    //     secondLinkText: "homepage-v2-second-link-text",
+    //     img: "https://res.cloudinary.com/ditoikfqn/image/upload/v1667780799/NextJS-Portfolio/homepage-v2_ixoni4.png",
+    // },
     {
         projectTitle: "Braid",
         projectYear: "2021", 

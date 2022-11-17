@@ -2,8 +2,6 @@ import { Box, Heading, Badge, Text, Tooltip, HStack, VStack } from "@chakra-ui/r
 import ButtonLink from "../ButtonLink"
 
 const ProjectDescription = ({ 
-    padding, 
-    width,
     projectTitle, 
     projectYear, 
     projectDesc, 
@@ -13,10 +11,14 @@ const ProjectDescription = ({
     firstLinkText,
     secondLinkIcon,
     secondLink,
-    secondLinkText 
+    secondLinkText,
+    ...props
 }) => {
     return (
-        <Box p={padding} w={width} as="section">
+        <Box 
+            as="section" 
+            {...props}
+        >
             <Box display='flex' alignItems='center' mb='1rem'>
                 <Heading
                     as="h2"
@@ -30,13 +32,15 @@ const ProjectDescription = ({
                     {projectYear}
                 </Badge>
             </Box>
-
-            <Text 
-                fontSize={{ base: "md", lg: "sm", xl: "md" }}
-                mb='1rem'
-            >
-                {projectDesc}
-            </Text>
+            
+            <Box>
+                <Text 
+                    fontSize={{ base: "md", lg: "sm", xl: "md" }}
+                    mb='1rem'
+                >
+                    {projectDesc}
+                </Text>
+            </Box>
 
             <HStack spacing='15px' mb='1rem'>
                 {projectStack.map((item) => {
