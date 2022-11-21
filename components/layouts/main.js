@@ -18,7 +18,7 @@ const Main = ({ children }) => {
                 <meta property="og:url" content="https://plnguyen.dev" />
                 <meta property="og:image" content="https://res.cloudinary.com/ditoikfqn/image/upload/v1667971166/NextJS-Portfolio/og_image_v2_ohj71l.jpg" />
                 <meta property="og:type" content="website" />
-                <meta property="og:description" content="Patrick-Lam Nguyen's homepage. Full Stack Wev Developer based in Montreal." />
+                <meta property="og:description" content="Patrick-Lam Nguyen's homepage. Full Stack Web Developer based in Montreal." />
             </Head>
 
             <Navbar />
